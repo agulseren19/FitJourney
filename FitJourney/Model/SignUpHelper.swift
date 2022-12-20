@@ -9,10 +9,7 @@ import Foundation
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
-import FirebaseCore
-import FirebaseCore
 import GoogleSignIn
-import FirebaseCore
 import FirebaseStorage
 
 class SignUpHelper{

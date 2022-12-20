@@ -5,9 +5,9 @@
 //  Created by Aslıhan Gülseren on 20.12.2022.
 //
 
-import Foundation
-
-
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
 class SignInHelper {
     
     var delegate: SignInDelegate?

@@ -6,7 +6,11 @@
 //
 
 import UIKit
-
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
+import GoogleSignIn
+import FirebaseStorage
 class SignInViewController: UIViewController {
 
     @IBOutlet weak var exerciseImage: UIImageView!
