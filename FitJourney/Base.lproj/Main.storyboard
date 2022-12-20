@@ -155,6 +155,56 @@
             </objects>
             <point key="canvasLocation" x="45" y="5"/>
         </scene>
+        <!--Item 2-->
+        <scene sceneID="mOf-4t-FGS">
+            <objects>
+                <viewController id="fri-A0-n3k" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VlC-yD-cec">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mms-tm-uyP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="fVD-QV-CWa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vZI-Vk-POd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2138" y="324"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="JnX-Bk-RLK">
+            <objects>
+                <viewController id="EIN-Ht-Lqu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4bZ-3F-bTP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gdP-aq-3vX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="bmU-4D-xaC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E4F-cR-BRT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2138" y="-280"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="zi5-Fs-BuK">
+            <objects>
+                <tabBarController restorationIdentifier="Tabbar" storyboardIdentifier="Tabbar" id="4t9-pm-BcE" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GPP-7N-gha">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="EIN-Ht-Lqu" kind="relationship" relationship="viewControllers" id="d9w-s1-CHm"/>
+                        <segue destination="fri-A0-n3k" kind="relationship" relationship="viewControllers" id="Sna-53-kVh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nhp-Jn-fWH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1236" y="5"/>
+        </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="jV8-GS-w4d">
             <objects>
@@ -257,6 +307,7 @@
                     <navigationItem key="navigationItem" id="Hpg-r2-oNi"/>
                     <connections>
                         <outlet property="emailField" destination="ty7-W7-jve" id="789-O5-M0P"/>
+                        <outlet property="errorText" destination="Boq-Mv-TTp" id="aG4-CF-5GK"/>
                         <outlet property="passwordField" destination="J5V-NO-VKe" id="Nz4-z4-qfq"/>
                         <outlet property="signUpImageView" destination="Y3G-s6-HeP" id="Byz-9I-k7o"/>
                     </connections>
