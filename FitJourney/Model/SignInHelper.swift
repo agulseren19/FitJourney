@@ -45,7 +45,7 @@ class SignInHelper {
             if let document = document, document.exists {
                 user.setEmail(email: userEmail)
                 user.setPassword(password: document.get("password")! as! String)
-                user.setMyHitchesArray(myHitchesArray: document.data()!["weights"]! as! [String])
+                user.setWeightsArray(weights: document.data()!["weights"]! as! [String])
                 self.delegate?.signInTheUser()
             } else {
                 print("Document does not exist")

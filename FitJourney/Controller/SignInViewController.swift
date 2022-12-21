@@ -28,26 +28,26 @@ class SignInViewController: UIViewController {
         // Do any additional setup after loading the view.
         emailField.delegate = self
         passwordField.delegate = self
-        NotificationCenter.default.addObserver(self, selector: #selector(LogInViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-              NotificationCenter.default.addObserver(self, selector: #selector(LogInViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SignInViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+              NotificationCenter.default.addObserver(self, selector: #selector(SignInViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     @objc func keyboardWillShow(notification: NSNotification) {
         
-        guard let  hitchImage=hitchImage , let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        guard let  exerciseImage=exerciseImage , let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
         else {
            return
         }
       
       self.view.frame.origin.y = 100 - keyboardSize.height
-        hitchImage.isHidden=true
+        exerciseImage.isHidden=true
 
     }
     @objc func keyboardWillHide(notification: NSNotification) {
       self.view.frame.origin.y = 0
-        hitchImage.isHidden=false
+        exerciseImage.isHidden=false
 
     }
 
@@ -71,17 +71,17 @@ extension SignInViewController: SignInDelegate {
         var tabBar: UITabBarController = self.storyboard?.instantiateViewController(withIdentifier: "Tabbar") as! UITabBarController
         self.navigationController?.pushViewController(tabBar, animated: true)
         
-        errorText.text = ""
+        errorLabel.text = ""
         passwordField.text = ""
         emailField.text = ""
     }
     
     func giveSignInError( errorDescription: String) {
         print(errorDescription)
-        errorText.text = errorDescription
-        errorText.isHidden = false
-        errorText.textColor = UIColor.red
-        errorText.adjustsFontSizeToFitWidth = true
+        errorLabel.text = errorDescription
+        errorLabel.isHidden = false
+        errorLabel.textColor = UIColor.red
+        errorLabel.adjustsFontSizeToFitWidth = true
     }
 }
 

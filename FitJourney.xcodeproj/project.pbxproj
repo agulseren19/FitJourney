@@ -24,6 +24,9 @@
 		0CA578922951DACD005279D6 /* SignUpHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA578912951DACD005279D6 /* SignUpHelper.swift */; };
 		0CA578942951DAEE005279D6 /* SignUpDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA578932951DAEE005279D6 /* SignUpDelegate.swift */; };
 		0CA578962951E0F1005279D6 /* SignInDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA578952951E0F1005279D6 /* SignInDelegate.swift */; };
+		0CCD3EEF29533D9F00E54A04 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0CCD3EEE29533D9F00E54A04 /* FirebaseFirestore */; };
+		0CCD3EF12953431200E54A04 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0CCD3EF02953431200E54A04 /* FirebaseStorage */; };
+		0CCD3EF3295346CE00E54A04 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCD3EF2295346CE00E54A04 /* User.swift */; };
 		81496E76C38CEBE52D9410DE /* Pods_FitJourney_FitJourneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 777C544B6E2AAE9B40850940 /* Pods_FitJourney_FitJourneyUITests.framework */; };
 		A45EA6CA29987C70D78ED556 /* Pods_FitJourney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17441DD43FBDD3A5A6ED2494 /* Pods_FitJourney.framework */; };
 		EAE55C97C027B4BA13ED2245 /* Pods_FitJourneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD057ADC121703A6A434826 /* Pods_FitJourneyTests.framework */; };
@@ -67,6 +70,7 @@
 		0CA578912951DACD005279D6 /* SignUpHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpHelper.swift; sourceTree = "<group>"; };
 		0CA578932951DAEE005279D6 /* SignUpDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDelegate.swift; sourceTree = "<group>"; };
 		0CA578952951E0F1005279D6 /* SignInDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDelegate.swift; sourceTree = "<group>"; };
+		0CCD3EF2295346CE00E54A04 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		16F69EE4EA6DB613C1D773D2 /* Pods-FitJourney-FitJourneyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourney-FitJourneyUITests.debug.xcconfig"; path = "Target Support Files/Pods-FitJourney-FitJourneyUITests/Pods-FitJourney-FitJourneyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		17441DD43FBDD3A5A6ED2494 /* Pods_FitJourney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitJourney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46CA33BD5B1DDC96340E1365 /* Pods-FitJourney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourney.debug.xcconfig"; path = "Target Support Files/Pods-FitJourney/Pods-FitJourney.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,7 +87,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C8180C9295116A6003829D8 /* FirebaseAnalyticsSwift in Frameworks */,
+				0CCD3EEF29533D9F00E54A04 /* FirebaseFirestore in Frameworks */,
 				0C8180C7295116A6003829D8 /* FirebaseAnalytics in Frameworks */,
+				0CCD3EF12953431200E54A04 /* FirebaseStorage in Frameworks */,
 				A45EA6CA29987C70D78ED556 /* Pods_FitJourney.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +120,7 @@
 				0CA578912951DACD005279D6 /* SignUpHelper.swift */,
 				0CA578932951DAEE005279D6 /* SignUpDelegate.swift */,
 				0CA578952951E0F1005279D6 /* SignInDelegate.swift */,
+				0CCD3EF2295346CE00E54A04 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,6 +241,8 @@
 			packageProductDependencies = (
 				0C8180C6295116A6003829D8 /* FirebaseAnalytics */,
 				0C8180C8295116A6003829D8 /* FirebaseAnalyticsSwift */,
+				0CCD3EEE29533D9F00E54A04 /* FirebaseFirestore */,
+				0CCD3EF02953431200E54A04 /* FirebaseStorage */,
 			);
 			productName = FitJourney;
 			productReference = 0C818090295105A8003829D8 /* FitJourney.app */;
@@ -465,6 +474,7 @@
 				0CA578962951E0F1005279D6 /* SignInDelegate.swift in Sources */,
 				0C21B27A2951C56D005236DA /* SignUpViewController.swift in Sources */,
 				0CA578942951DAEE005279D6 /* SignUpDelegate.swift in Sources */,
+				0CCD3EF3295346CE00E54A04 /* User.swift in Sources */,
 				0CA578922951DACD005279D6 /* SignUpHelper.swift in Sources */,
 				0C818096295105A8003829D8 /* SceneDelegate.swift in Sources */,
 				0C21B27C2951D548005236DA /* SignInHelper.swift in Sources */,
@@ -839,6 +849,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0C8180C5295116A6003829D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsSwift;
+		};
+		0CCD3EEE29533D9F00E54A04 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C8180C5295116A6003829D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		0CCD3EF02953431200E54A04 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C8180C5295116A6003829D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -20,11 +20,12 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpImageView: UIImageView!
     
     @IBOutlet weak var errorText: UILabel!
+    let signUpHelper = SignUpHelper()
     override func viewDidLoad() {
         super.viewDidLoad()
         signUpHelper.delegate = self
-        NotificationCenter.default.addObserver(self, selector: #selector(LogInViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-              NotificationCenter.default.addObserver(self, selector: #selector(LogInViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SignUpViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+              NotificationCenter.default.addObserver(self, selector: #selector(SignUpViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         // Do any additional setup after loading the view.
     }
     
@@ -46,19 +47,17 @@ class SignUpViewController: UIViewController {
     }
     @objc func keyboardWillShow(notification: NSNotification) {
         
-        guard let  profileImageView=profileImageView , let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        guard let  signUpImageView=signUpImageView , let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
         else {
            return
         }
         self.view.frame.origin.y = 100 - keyboardSize.height
-        profileImageView.isHidden=true
-        uploadImageButton.isHidden=true
+        signUpImageView.isHidden=true
 
     }
     @objc func keyboardWillHide(notification: NSNotification) {
       self.view.frame.origin.y = 0
-        profileImageView.isHidden=false
-        uploadImageButton.isHidden=false
+        signUpImageView.isHidden=false
 
     }
 }
