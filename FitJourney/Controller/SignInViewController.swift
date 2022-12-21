@@ -26,6 +26,7 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        signInHelper.delegate = self
         emailField.delegate = self
         passwordField.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(SignInViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -67,10 +68,9 @@ extension SignInViewController: SignInDelegate {
     func signInTheUser() {
         // if the user's email and password is validated
         // the user will be signed in and navigated to home screen
-        
+        print("signed in")
         var tabBar: UITabBarController = self.storyboard?.instantiateViewController(withIdentifier: "Tabbar") as! UITabBarController
         self.navigationController?.pushViewController(tabBar, animated: true)
-        
         errorLabel.text = ""
         passwordField.text = ""
         emailField.text = ""

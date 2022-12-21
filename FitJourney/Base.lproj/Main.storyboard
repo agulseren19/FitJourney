@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rav-gf-uaS">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -93,7 +92,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yIE-7d-xRJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exercise" translatesAutoresizingMaskIntoConstraints="NO" id="yIE-7d-xRJ">
                                 <rect key="frame" x="1.6666666666666572" y="91" width="389.66666666666674" height="259.66666666666669"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yIE-7d-xRJ" secondAttribute="height" multiplier="3:2" id="PCe-iA-uqR"/>
@@ -229,8 +228,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="one-time-code"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail_icon" translatesAutoresizingMaskIntoConstraints="NO" id="qPq-dW-9eo">
-                                <rect key="frame" x="30" y="447" width="34" height="34"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qPq-dW-9eo">
+                                <rect key="frame" x="30" y="448.66666666666669" width="34" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="gX4-su-cdU"/>
                                 </constraints>
@@ -245,8 +244,8 @@
                                     <action selector="signUpButtonIsClicked:" destination="USk-3H-EAq" eventType="touchUpInside" id="iVc-AQ-0LY"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="padlock" translatesAutoresizingMaskIntoConstraints="NO" id="BWZ-aL-arb">
-                                <rect key="frame" x="30" y="515" width="34" height="34"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BWZ-aL-arb">
+                                <rect key="frame" x="30" y="516" width="34" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="enb-DF-309"/>
                                 </constraints>
@@ -263,7 +262,7 @@
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfile" translatesAutoresizingMaskIntoConstraints="NO" id="Y3G-s6-HeP">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signUp" translatesAutoresizingMaskIntoConstraints="NO" id="Y3G-s6-HeP">
                                 <rect key="frame" x="85" y="91" width="210" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="zZm-oC-m6G"/>
@@ -318,11 +317,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="defaultProfile" width="1200" height="1200"/>
+        <image name="exercise" width="700" height="438"/>
         <image name="lock" catalog="system" width="125" height="128"/>
         <image name="mail" catalog="system" width="128" height="93"/>
-        <image name="mail_icon" width="101" height="75"/>
-        <image name="padlock" width="512" height="512"/>
+        <image name="signUp" width="1009" height="803"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
