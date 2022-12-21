@@ -18,8 +18,6 @@ target 'FitJourney' do
   
   pod 'GoogleSignIn'
   
-  pod 'Firebase/Messaging'
-
   target 'FitJourneyTests' do
     inherit! :search_paths
     # Pods for testing
