@@ -8,7 +8,7 @@ target 'FitJourney' do
   # Pods for FitJourney
 
   pod 'FirebaseAuth'
-  
+  pod 'Charts'
   pod 'GoogleSignIn'
   
   target 'FitJourneyTests' do

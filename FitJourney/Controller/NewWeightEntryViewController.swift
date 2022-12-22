@@ -11,15 +11,25 @@ class NewWeightEntryViewController: UIViewController {
 
     @IBOutlet weak var weightPickerView: UIPickerView!
     
+    @IBOutlet weak var weightDatePicker: UIDatePicker!
+    
     let newWeightEntryHelper = NewWeightEntryHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        newWeightEntryHelper.delegate = self
         newWeightEntryHelper.createWeightArrays()
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func addButtonTapped(_ sender: Any) {
+        let newDate  = weightDatePicker.date
+        let newKg =  newWeightEntryHelper.getKgArray(row: weightPickerView.selectedRow(inComponent: 0))
+        let newGr = newWeightEntryHelper.getGrArray(row: weightPickerView.selectedRow(inComponent: 1))
+        
+        newWeightEntryHelper.addNewWeightEntryToFirebase(date: newDate, kg: newKg, gr: newGr)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -45,6 +55,24 @@ extension NewWeightEntryViewController: UIPickerViewDataSource, UIPickerViewDele
         return newWeightEntryHelper.getGrArrayCount()
     }
     
-    func
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if component == 0 {
+            return String(newWeightEntryHelper.getKgArray(row: row))
+        }
+        return String(newWeightEntryHelper.getGrArray(row: row))
+    }
+ 
+}
+
+extension NewWeightEntryViewController: NewWeightEntryDelegate {
+    
+    func arraysAreLoaded(){
+        weightPickerView.reloadAllComponents()
+    }
+    
+    func newEntrySuccesfullyWrittenToFirebase() {
+        //pop the previous screen
+        self.navigationController?.popToRootViewController(animated: true)
+    }
 }
 
