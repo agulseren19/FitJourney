@@ -51,7 +51,7 @@ class SignUpViewController: UIViewController {
         else {
            return
         }
-        self.view.frame.origin.y = 100 - keyboardSize.height
+        self.view.frame.origin.y = 200 - keyboardSize.height
         signUpImageView.isHidden=true
 
     }

@@ -44,13 +44,24 @@ class SignInHelper {
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 user.setEmail(email: userEmail)
-                user.setPassword(password: document.get("password")! as! String)
+              //  user.setPassword(password: document.get("password")! as! String)
                 user.setWeightsArray(weights: document.data()!["weights"]! as! [String])
                 self.delegate?.signInTheUser()
             } else {
                 print("Document does not exist")
             }
         }
+    }
+    
+    func createNewPassword(userEmail: String){
+       // guard let email = Auth.auth().currentUser?.email else { return }
+        //Auth.auth().currentUser?.updatePassword(to: password) { error in
+        Auth.auth().sendPasswordReset(withEmail: userEmail) { error in
+            if error != nil{
+                print("Could not send email")
+            }
+        }
+
     }
     
 }

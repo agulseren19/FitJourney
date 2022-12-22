@@ -11,7 +11,7 @@ final class User: NSObject {
    static let sharedInstance = User()
     
     var email : String = ""
-    var password : String = ""
+    //var password : String = ""
     var weights = [String]()
 
    private override init() { }
@@ -25,13 +25,14 @@ final class User: NSObject {
         return self.email
     }
     
-    func setPassword(password : String) {
+  /*  func setPassword(password : String) {
         self.password = password
     }
      
      func getPassword() -> String {
          return self.password
      }
+   */
     
  
     func setWeightsArray(weights : [String]) {
