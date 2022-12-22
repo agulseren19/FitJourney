@@ -168,7 +168,7 @@
             </objects>
             <point key="canvasLocation" x="45" y="5"/>
         </scene>
-        <!--Item 2-->
+        <!--Workouts-->
         <scene sceneID="mOf-4t-FGS">
             <objects>
                 <viewController id="fri-A0-n3k" sceneMemberID="viewController">
@@ -178,27 +178,131 @@
                         <viewLayoutGuide key="safeArea" id="mms-tm-uyP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="fVD-QV-CWa"/>
+                    <tabBarItem key="tabBarItem" title="Workouts" image="dumbbell.fill" catalog="system" id="fVD-QV-CWa">
+                        <color key="badgeColor" red="0.74726301429999997" green="0.044088833030000003" blue="0.14435225730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="lda-0m-7Be"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZI-Vk-POd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2138" y="324"/>
+            <point key="canvasLocation" x="3134" y="418"/>
         </scene>
-        <!--Item 1-->
+        <!--Item-->
+        <scene sceneID="DpZ-pa-tEd">
+            <objects>
+                <navigationController id="DE9-BA-nAt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="HFM-rt-e0n"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cVO-1L-Y4A">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fri-A0-n3k" kind="relationship" relationship="rootViewController" id="ix6-b7-N0E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gyA-c9-26r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2279" y="418"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="9c9-dv-wui">
+            <objects>
+                <navigationController id="P78-3n-ner" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="zT2-2M-Jap"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CRb-Y4-ktP">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EIN-Ht-Lqu" kind="relationship" relationship="rootViewController" id="2cI-tx-8IL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jsx-uG-hN1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2279" y="-339"/>
+        </scene>
+        <!--My Weights-->
         <scene sceneID="JnX-Bk-RLK">
             <objects>
-                <viewController id="EIN-Ht-Lqu" sceneMemberID="viewController">
+                <viewController id="EIN-Ht-Lqu" customClass="MyWeightsViewController" customModule="FitJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4bZ-3F-bTP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxr-hZ-qpX">
+                                <rect key="frame" x="0.0" y="103" width="393" height="261"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xut-TN-MyE">
+                                <rect key="frame" x="0.0" y="372" width="393" height="397"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gdP-aq-3vX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gdP-aq-3vX" firstAttribute="trailing" secondItem="kxr-hZ-qpX" secondAttribute="trailing" id="74k-5S-tEf"/>
+                            <constraint firstItem="kxr-hZ-qpX" firstAttribute="height" secondItem="4bZ-3F-bTP" secondAttribute="height" multiplier="0.306338" id="I2B-f3-Kdi"/>
+                            <constraint firstItem="Xut-TN-MyE" firstAttribute="top" secondItem="kxr-hZ-qpX" secondAttribute="bottom" constant="8" symbolic="YES" id="SgS-yA-uwd"/>
+                            <constraint firstItem="kxr-hZ-qpX" firstAttribute="leading" secondItem="gdP-aq-3vX" secondAttribute="leading" id="WdK-3f-jIg"/>
+                            <constraint firstItem="gdP-aq-3vX" firstAttribute="trailing" secondItem="Xut-TN-MyE" secondAttribute="trailing" id="hDT-od-djB"/>
+                            <constraint firstItem="Xut-TN-MyE" firstAttribute="leading" secondItem="gdP-aq-3vX" secondAttribute="leading" id="lcb-HW-29C"/>
+                            <constraint firstItem="gdP-aq-3vX" firstAttribute="bottom" secondItem="Xut-TN-MyE" secondAttribute="bottom" id="nkx-Q8-fJ2"/>
+                            <constraint firstItem="kxr-hZ-qpX" firstAttribute="top" secondItem="gdP-aq-3vX" secondAttribute="top" id="zhM-Te-3zM"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="bmU-4D-xaC"/>
+                    <tabBarItem key="tabBarItem" title="My Weights" image="scalemass.fill" catalog="system" id="bmU-4D-xaC">
+                        <color key="badgeColor" red="0.74726301429999997" green="0.044088833030000003" blue="0.14435225730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="Iqc-Ap-KHg">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="X8a-sc-5Wu">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="j2g-zJ-MQl">
+                                <rect key="frame" x="302" y="0.0" width="75" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.74726301429999997" green="0.044088833030000003" blue="0.14435225730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus.circle.fill" catalog="system">
+                                    <color key="baseForegroundColor" red="0.74726301429999997" green="0.044088833030000003" blue="0.14435225730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="16y-Xs-K0G" kind="show" id="y9y-K3-a3g"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4F-cR-BRT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2138" y="-280"/>
+            <point key="canvasLocation" x="3133.5877862595416" y="-339.43661971830988"/>
+        </scene>
+        <!--New Weight Entry View Controller-->
+        <scene sceneID="Kew-6g-xsT">
+            <objects>
+                <viewController id="16y-Xs-K0G" customClass="NewWeightEntryViewController" customModule="FitJourney" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y7z-tN-egG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o6a-z3-TAX">
+                                <rect key="frame" x="-1" y="234" width="393" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="16y-Xs-K0G" id="B0E-Rh-bes"/>
+                                    <outlet property="delegate" destination="16y-Xs-K0G" id="o4H-ht-SUf"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AYf-fy-qTt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OIS-0r-srU"/>
+                    <connections>
+                        <outlet property="weightPickerView" destination="o6a-z3-TAX" id="m3S-aZ-alZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Op-us-Ydh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4236" y="-339"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zi5-Fs-BuK">
@@ -210,8 +314,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="EIN-Ht-Lqu" kind="relationship" relationship="viewControllers" id="d9w-s1-CHm"/>
-                        <segue destination="fri-A0-n3k" kind="relationship" relationship="viewControllers" id="Sna-53-kVh"/>
+                        <segue destination="P78-3n-ner" kind="relationship" relationship="viewControllers" id="nUM-Mt-mVZ"/>
+                        <segue destination="DE9-BA-nAt" kind="relationship" relationship="viewControllers" id="yDx-2Y-PKc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhp-Jn-fWH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -333,9 +437,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dumbbell.fill" catalog="system" width="128" height="72"/>
         <image name="exercise" width="698" height="288"/>
         <image name="lock" catalog="system" width="125" height="128"/>
         <image name="mail" catalog="system" width="128" height="93"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="scalemass.fill" catalog="system" width="128" height="121"/>
         <image name="signUp" width="1009" height="803"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
