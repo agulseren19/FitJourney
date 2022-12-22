@@ -37,7 +37,7 @@ class SignUpHelper{
                                 "weights": []
                             ]) { err in
                                 if let err = err {
-                                    print("Error writing document: \(err)")
+                                    print("Error writing document")
                                 }
                             }
                             self.delegate?.signUpTheUser()

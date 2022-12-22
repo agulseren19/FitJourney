@@ -26,7 +26,15 @@ class SignInViewController: UIViewController {
     
     @IBAction func forgotPasswordButtonClicked(_ sender: UIButton) {
         let userEmail = emailField.text!
-        signInHelper.createNewPassword(userEmail: userEmail)
+        if userEmail == ""{
+            errorLabel.text = "If you forgot your password, write your email, click button and check your email"
+            errorLabel.isHidden = false
+            errorLabel.textColor = UIColor.red
+            errorLabel.adjustsFontSizeToFitWidth = true
+        }
+        else{
+            signInHelper.createNewPassword(userEmail: userEmail)
+        }
     }
     
     override func viewDidLoad() {
@@ -40,7 +48,7 @@ class SignInViewController: UIViewController {
        /* let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
               tap.cancelsTouchesInView = false
               view.addGestureRecognizer(tap) */
-        errorLabel.text = "If you forgot your password, write your email and click 'forgot password?'"
+        errorLabel.text = "If you forgot your password, write your email, click button and check your email"
         errorLabel.isHidden = false
         errorLabel.textColor = UIColor.red
         errorLabel.adjustsFontSizeToFitWidth = true
@@ -90,7 +98,6 @@ extension SignInViewController: SignInDelegate {
     }
     
     func giveSignInError( errorDescription: String) {
-        print(errorDescription)
         errorLabel.text = errorDescription
         errorLabel.isHidden = false
         errorLabel.textColor = UIColor.red
