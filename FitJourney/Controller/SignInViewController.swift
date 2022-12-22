@@ -23,6 +23,12 @@ class SignInViewController: UIViewController {
         let userPassword = passwordField.text!
         signInHelper.checkAndSignIn(userEmail: userEmail, userPassword: userPassword)
     }
+    
+    @IBAction func forgotPasswordButtonClicked(_ sender: UIButton) {
+        let userEmail = emailField.text!
+        signInHelper.createNewPassword(userEmail: userEmail)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -31,6 +37,9 @@ class SignInViewController: UIViewController {
         passwordField.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(SignInViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
               NotificationCenter.default.addObserver(self, selector: #selector(SignInViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+       /* let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+              tap.cancelsTouchesInView = false
+              view.addGestureRecognizer(tap) */
     }
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -42,7 +51,7 @@ class SignInViewController: UIViewController {
            return
         }
       
-      self.view.frame.origin.y = 100 - keyboardSize.height
+      self.view.frame.origin.y = 200 - keyboardSize.height
         exerciseImage.isHidden=true
 
     }
