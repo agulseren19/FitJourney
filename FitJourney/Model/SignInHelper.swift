@@ -44,7 +44,7 @@ class SignInHelper {
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 user.setEmail(email: userEmail)
-                user.setPassword(password: document.get("password")! as! String)
+              //  user.setPassword(password: document.get("password")! as! String)
                 user.setWeightsArray(weights: document.data()!["weights"]! as! [String])
                 self.delegate?.signInTheUser()
             } else {

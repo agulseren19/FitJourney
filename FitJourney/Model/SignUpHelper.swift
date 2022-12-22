@@ -21,7 +21,10 @@ class SignUpHelper{
     func createAndSaveUser(email:String,password:String){
         Auth.auth().createUser(withEmail: email,
                                password: password) { user, error in
-            if error != nil {
+            if password.count<6 {
+                self.delegate?.giveSignUpError(errorDescription: "Your password should be at least 6 characters.")
+            }
+            else if error != nil {
                 self.delegate?.giveSignUpError(errorDescription: "You have already signed up or this email is incorrect.")
             }
             else {
@@ -30,7 +33,7 @@ class SignUpHelper{
                             let db = Firestore.firestore()
                             db.collection("users").document(email).setData([
                                 "email": email,
-                                "password": password,
+                            //    "password": password,
                                 "weights": []
                             ]) { err in
                                 if let err = err {

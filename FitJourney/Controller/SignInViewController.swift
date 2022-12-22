@@ -40,6 +40,10 @@ class SignInViewController: UIViewController {
        /* let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
               tap.cancelsTouchesInView = false
               view.addGestureRecognizer(tap) */
+        errorLabel.text = "If you forgot your password, write your email and click 'forgot password?'"
+        errorLabel.isHidden = false
+        errorLabel.textColor = UIColor.red
+        errorLabel.adjustsFontSizeToFitWidth = true
     }
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
