@@ -154,7 +154,7 @@
             </objects>
             <point key="canvasLocation" x="45" y="5"/>
         </scene>
-        <!--Item 2-->
+        <!--Workouts-->
         <scene sceneID="mOf-4t-FGS">
             <objects>
                 <viewController id="fri-A0-n3k" sceneMemberID="viewController">
@@ -164,13 +164,15 @@
                         <viewLayoutGuide key="safeArea" id="mms-tm-uyP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="fVD-QV-CWa"/>
+                    <tabBarItem key="tabBarItem" title="Workouts" image="dumbbell.fill" catalog="system" id="fVD-QV-CWa">
+                        <color key="badgeColor" red="0.74726301429999997" green="0.044088833030000003" blue="0.14435225730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZI-Vk-POd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2138" y="324"/>
         </scene>
-        <!--Item 1-->
+        <!--MyWeights-->
         <scene sceneID="JnX-Bk-RLK">
             <objects>
                 <viewController id="EIN-Ht-Lqu" sceneMemberID="viewController">
@@ -180,7 +182,9 @@
                         <viewLayoutGuide key="safeArea" id="gdP-aq-3vX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="bmU-4D-xaC"/>
+                    <tabBarItem key="tabBarItem" title="MyWeights" image="scalemass.fill" catalog="system" id="bmU-4D-xaC">
+                        <color key="badgeColor" red="0.74726301429999997" green="0.044088833030000003" blue="0.14435225730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4F-cR-BRT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -317,9 +321,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dumbbell.fill" catalog="system" width="128" height="72"/>
         <image name="exercise" width="700" height="438"/>
         <image name="lock" catalog="system" width="125" height="128"/>
         <image name="mail" catalog="system" width="128" height="93"/>
+        <image name="scalemass.fill" catalog="system" width="128" height="121"/>
         <image name="signUp" width="1009" height="803"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
