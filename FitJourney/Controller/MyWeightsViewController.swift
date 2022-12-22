@@ -16,6 +16,7 @@ class MyWeightsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "My Weights"
         // Do any additional setup after loading the view.
         myWeightsDataSource.delegate = self
         
@@ -26,7 +27,17 @@ class MyWeightsViewController: UIViewController {
     }
     
     func setChartValues() {
-        let values =
+        guard let values = myWeightsDataSource.getWeightChartEntryArray() else { return  }
+        let set = LineChartDataSet(entries: values, label: "My Weights")
+        set.mode = .cubicBezier
+        let weightData = LineChartData(dataSet: set)
+        myWeightsLineChartView.xAxis.valueFormatter = DateValueFormatter()
+        self.myWeightsLineChartView.data = weightData
+        self.myWeightsLineChartView.xAxis.setLabelCount(myWeightsDataSource.getNumberOfWeightChartEntry(), force: true)
+        myWeightsLineChartView.xAxis.labelPosition = .bottom
+        myWeightsLineChartView.xAxis.yOffset = 10.0
+        self.myWeightsLineChartView.animate(xAxisDuration: Double(myWeightsDataSource.getNumberOfWeightChartEntry())*0.03)
+        
     }
 
     /*
@@ -75,5 +86,6 @@ extension MyWeightsViewController: UITableViewDataSource{
 extension MyWeightsViewController: MyWeightsDataDelegate {
     func weightEntryListLoaded() {
         myWeightsTableView.reloadData()
+        self.setChartValues()
     }
 }

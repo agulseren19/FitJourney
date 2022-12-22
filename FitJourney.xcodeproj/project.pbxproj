@@ -58,6 +58,7 @@
 		1EEA1B102954C3D0001EE08A /* MyWeightsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA1B0F2954C3D0001EE08A /* MyWeightsDataSource.swift */; };
 		1EEA1B122954C415001EE08A /* WeightEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA1B112954C415001EE08A /* WeightEntry.swift */; };
 		1EEA1B142954C470001EE08A /* MyWeightsDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA1B132954C470001EE08A /* MyWeightsDataDelegate.swift */; };
+		1EEA1B162954F573001EE08A /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA1B152954F573001EE08A /* DateValueFormatter.swift */; };
 		81496E76C38CEBE52D9410DE /* Pods_FitJourney_FitJourneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 777C544B6E2AAE9B40850940 /* Pods_FitJourney_FitJourneyUITests.framework */; };
 		A45EA6CA29987C70D78ED556 /* Pods_FitJourney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17441DD43FBDD3A5A6ED2494 /* Pods_FitJourney.framework */; };
 		EAE55C97C027B4BA13ED2245 /* Pods_FitJourneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD057ADC121703A6A434826 /* Pods_FitJourneyTests.framework */; };
@@ -112,6 +113,7 @@
 		1EEA1B0F2954C3D0001EE08A /* MyWeightsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWeightsDataSource.swift; sourceTree = "<group>"; };
 		1EEA1B112954C415001EE08A /* WeightEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightEntry.swift; sourceTree = "<group>"; };
 		1EEA1B132954C470001EE08A /* MyWeightsDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWeightsDataDelegate.swift; sourceTree = "<group>"; };
+		1EEA1B152954F573001EE08A /* DateValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
 		46CA33BD5B1DDC96340E1365 /* Pods-FitJourney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourney.debug.xcconfig"; path = "Target Support Files/Pods-FitJourney/Pods-FitJourney.debug.xcconfig"; sourceTree = "<group>"; };
 		72DFE31FCB5D8D8FEF93E178 /* Pods-FitJourney-FitJourneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourney-FitJourneyUITests.release.xcconfig"; path = "Target Support Files/Pods-FitJourney-FitJourneyUITests/Pods-FitJourney-FitJourneyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		777C544B6E2AAE9B40850940 /* Pods_FitJourney_FitJourneyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitJourney_FitJourneyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +190,7 @@
 				1EEA1B0F2954C3D0001EE08A /* MyWeightsDataSource.swift */,
 				1EEA1B112954C415001EE08A /* WeightEntry.swift */,
 				1EEA1B132954C470001EE08A /* MyWeightsDataDelegate.swift */,
+				1EEA1B152954F573001EE08A /* DateValueFormatter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				1EEA1B0E2954C178001EE08A /* WeightEntryTableViewCell.swift in Sources */,
 				0CCD3EF3295346CE00E54A04 /* User.swift in Sources */,
 				1E0D284A295484A300DBDC3F /* MyWeightsViewController.swift in Sources */,
+				1EEA1B162954F573001EE08A /* DateValueFormatter.swift in Sources */,
 				0CA578922951DACD005279D6 /* SignUpHelper.swift in Sources */,
 				0C818096295105A8003829D8 /* SceneDelegate.swift in Sources */,
 				0C21B27C2951D548005236DA /* SignInHelper.swift in Sources */,

@@ -191,7 +191,9 @@
         <scene sceneID="DpZ-pa-tEd">
             <objects>
                 <navigationController id="DE9-BA-nAt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="HFM-rt-e0n"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="HFM-rt-e0n">
+                        <color key="badgeColor" red="0.74726301429999997" green="0.044088833030000003" blue="0.14435225730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cVO-1L-Y4A">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -208,7 +210,9 @@
         <scene sceneID="9c9-dv-wui">
             <objects>
                 <navigationController id="P78-3n-ner" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zT2-2M-Jap"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="zT2-2M-Jap">
+                        <color key="badgeColor" red="0.74726301429999997" green="0.044088833030000003" blue="0.14435225730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CRb-Y4-ktP">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -444,6 +448,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.74726301429999997" green="0.044088833030000003" blue="0.14435225730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="P78-3n-ner" kind="relationship" relationship="viewControllers" id="nUM-Mt-mVZ"/>

@@ -21,6 +21,7 @@ class MyWeightsDataSource {
     
     func getListofWeightEntryFromFirebase(){
         self.weightEntryArray.removeAll()
+        self.weightChartEntryArray.removeAll()
         var mutex = 0
         for i in 0..<User.sharedInstance.getWeightsArrayCount() {
             var weightEntryId = User.sharedInstance.getWeightsArray()[i]
@@ -33,7 +34,7 @@ class MyWeightsDataSource {
                         weight: document.get("weight") as! Double
                     )
                     var newChartDataEntry = ChartDataEntry(
-                        x: Double(i),
+                        x: (document.get("date") as! Timestamp).dateValue().timeIntervalSince1970,
                         y: document.get("weight") as! Double
                     )
                     self.weightEntryArray.append(newWeightEntry)
@@ -41,15 +42,18 @@ class MyWeightsDataSource {
                     mutex = mutex + 1
                     if (mutex == User.sharedInstance.getWeightsArrayCount()){
                         self.weightEntryArray = self.weightEntryArray.sorted(by: { $0.date < $1.date })
+                        self.weightChartEntryArray = self.weightChartEntryArray.sorted(by: { $0.x < $1.x })
                         DispatchQueue.main.async {
                             self.delegate?.weightEntryListLoaded()
                         }
                     }
-                    else {
-                        print("Document does not exist in my Ride")
-                    }
                     
                 }
+                else {
+                    print("Document does not exist in my Ride")
+                }
+                    
+                
             }
         }
     }
@@ -64,5 +68,21 @@ class MyWeightsDataSource {
         }
         return weightEntryArray[index]
     }
+    
+    func getNumberOfWeightChartEntry() -> Int {
+        return weightChartEntryArray.count
+    }
+    
+    func getWeightChartEntryArray() -> [ChartDataEntry]? {
+        return weightChartEntryArray
+    }
+    
+    func getWeightChartEntry(for index: Int) -> ChartDataEntry? {
+        guard index < weightChartEntryArray.count else {
+            return nil
+        }
+        return weightChartEntryArray[index]
+    }
+
     
 }

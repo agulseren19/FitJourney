@@ -19,6 +19,7 @@ class NewWeightEntryViewController: UIViewController {
         super.viewDidLoad()
         newWeightEntryHelper.delegate = self
         newWeightEntryHelper.createWeightArrays()
+        self.title = "New Weight"
         // Do any additional setup after loading the view.
     }
     
