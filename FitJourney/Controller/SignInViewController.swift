@@ -79,12 +79,13 @@ extension SignInViewController: SignInDelegate {
         // if the user's email and password is validated
         // the user will be signed in and navigated to home screen
         print("signed in")
-        
-        var tabBar: UITabBarController = self.storyboard?.instantiateViewController(withIdentifier: "Tabbar") as! UITabBarController
-        self.navigationController?.pushViewController(tabBar, animated: true)
-        errorLabel.text = ""
-        passwordField.text = ""
-        emailField.text = ""
+        if  let tabBar: UITabBarController = self.storyboard?.instantiateViewController(withIdentifier: "Tabbar") as? UITabBarController{
+            self.navigationController?.pushViewController(tabBar, animated: true)
+            errorLabel.text = ""
+            passwordField.text = ""
+            emailField.text = ""
+        }
+ 
     }
     
     func giveSignInError( errorDescription: String) {
