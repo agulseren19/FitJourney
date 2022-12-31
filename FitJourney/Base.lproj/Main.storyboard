@@ -79,7 +79,6 @@
                         <viewLayoutGuide key="safeArea" id="BBx-3X-1di"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="KYJ-Xv-MRN" firstAttribute="centerY" secondItem="BBx-3X-1di" secondAttribute="centerY" id="0dl-4a-M0j"/>
                             <constraint firstItem="BBx-3X-1di" firstAttribute="trailing" secondItem="PtK-NO-hoB" secondAttribute="trailing" constant="43" id="7jt-9O-Ptg"/>
                             <constraint firstItem="KYJ-Xv-MRN" firstAttribute="centerX" secondItem="BBx-3X-1di" secondAttribute="centerX" id="7y7-3M-xA6"/>
                             <constraint firstItem="D5Z-gv-t68" firstAttribute="leading" secondItem="BBx-3X-1di" secondAttribute="leading" constant="30" id="8iB-Qt-Ecz"/>
@@ -87,18 +86,18 @@
                             <constraint firstItem="tZP-jz-b8Y" firstAttribute="top" secondItem="GHx-dr-czB" secondAttribute="bottom" constant="8" symbolic="YES" id="Dh2-Ao-Mc6"/>
                             <constraint firstItem="GHx-dr-czB" firstAttribute="leading" secondItem="D5Z-gv-t68" secondAttribute="leading" id="IBx-43-Dqh"/>
                             <constraint firstItem="KYJ-Xv-MRN" firstAttribute="top" secondItem="PtK-NO-hoB" secondAttribute="bottom" constant="21" id="SrV-W2-j9v"/>
-                            <constraint firstItem="BBx-3X-1di" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="D5Z-gv-t68" secondAttribute="bottom" constant="498" id="VgS-Il-ZcB"/>
                             <constraint firstItem="PtK-NO-hoB" firstAttribute="centerY" secondItem="Y8z-vi-4Bd" secondAttribute="centerY" id="XFf-cr-G2Y"/>
                             <constraint firstItem="KYJ-Xv-MRN" firstAttribute="width" secondItem="zkL-av-l9U" secondAttribute="width" multiplier="0.717557" id="caT-dJ-UwT"/>
                             <constraint firstItem="Y8z-vi-4Bd" firstAttribute="width" secondItem="Y8z-vi-4Bd" secondAttribute="height" multiplier="1:1" id="cj9-BB-02Q"/>
                             <constraint firstItem="BBx-3X-1di" firstAttribute="trailing" secondItem="tZP-jz-b8Y" secondAttribute="trailing" constant="43" id="doR-nB-UjR"/>
+                            <constraint firstItem="GHx-dr-czB" firstAttribute="top" secondItem="D5Z-gv-t68" secondAttribute="bottom" constant="8.0000000000000568" id="h9N-9v-CuI"/>
                             <constraint firstItem="BBx-3X-1di" firstAttribute="bottom" secondItem="PtK-NO-hoB" secondAttribute="bottom" constant="396" id="jv1-ma-zJF"/>
                             <constraint firstItem="Y8z-vi-4Bd" firstAttribute="leading" secondItem="BBx-3X-1di" secondAttribute="leading" constant="30" id="m3O-wD-LJR"/>
                             <constraint firstItem="BBx-3X-1di" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GHx-dr-czB" secondAttribute="trailing" priority="750" constant="173" id="mHY-fx-vb4"/>
+                            <constraint firstItem="BBx-3X-1di" firstAttribute="bottom" secondItem="KYJ-Xv-MRN" secondAttribute="bottom" constant="340" id="pCk-nr-8U8"/>
                             <constraint firstItem="PtK-NO-hoB" firstAttribute="leading" secondItem="Y8z-vi-4Bd" secondAttribute="trailing" constant="8" symbolic="YES" id="qUz-iM-O9P"/>
                             <constraint firstItem="BBx-3X-1di" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="D5Z-gv-t68" secondAttribute="trailing" priority="750" constant="203" id="tp2-mz-C2Q"/>
                             <constraint firstItem="PtK-NO-hoB" firstAttribute="top" secondItem="tZP-jz-b8Y" secondAttribute="bottom" constant="11" id="umK-p8-fRm"/>
-                            <constraint firstItem="D5Z-gv-t68" firstAttribute="top" secondItem="BBx-3X-1di" secondAttribute="top" constant="190.33333333333326" id="zJB-FR-ZIk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Reset Password" id="Lc3-7h-TzD"/>
