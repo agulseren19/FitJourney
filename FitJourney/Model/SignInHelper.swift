@@ -53,15 +53,6 @@ class SignInHelper {
         }
     }
     
-    func createNewPassword(userEmail: String){
-       // guard let email = Auth.auth().currentUser?.email else { return }
-        //Auth.auth().currentUser?.updatePassword(to: password) { error in
-        Auth.auth().sendPasswordReset(withEmail: userEmail) { error in
-            if error != nil{
-                print("Could not send email")
-            }
-        }
 
-    }
     
 }

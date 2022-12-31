@@ -19,23 +19,15 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     let signInHelper = SignInHelper()
     @IBAction func signInButtonClicked(_ sender: UIButton) {
-        let userEmail = emailField.text!
-        let userPassword = passwordField.text!
+        guard let userEmail = emailField.text,
+            let userPassword = passwordField.text
+        else{
+            return
+        }
         signInHelper.checkAndSignIn(userEmail: userEmail, userPassword: userPassword)
     }
     
-    @IBAction func forgotPasswordButtonClicked(_ sender: UIButton) {
-        let userEmail = emailField.text!
-        if userEmail == ""{
-            errorLabel.text = "If you forgot your password, write your email, click button and check your email"
-            errorLabel.isHidden = false
-            errorLabel.textColor = UIColor.red
-            errorLabel.adjustsFontSizeToFitWidth = true
-        }
-        else{
-            signInHelper.createNewPassword(userEmail: userEmail)
-        }
-    }
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,13 +40,10 @@ class SignInViewController: UIViewController {
        /* let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
               tap.cancelsTouchesInView = false
               view.addGestureRecognizer(tap) */
-        errorLabel.text = "If you forgot your password, write your email, click button and check your email"
-        errorLabel.isHidden = false
-        errorLabel.textColor = UIColor.red
-        errorLabel.adjustsFontSizeToFitWidth = true
+
     }
     override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+      //  self.navigationController?.setNavigationBarHidden(true, animated: animated) asli
     }
     @objc func keyboardWillShow(notification: NSNotification) {
         
@@ -90,6 +79,7 @@ extension SignInViewController: SignInDelegate {
         // if the user's email and password is validated
         // the user will be signed in and navigated to home screen
         print("signed in")
+        
         var tabBar: UITabBarController = self.storyboard?.instantiateViewController(withIdentifier: "Tabbar") as! UITabBarController
         self.navigationController?.pushViewController(tabBar, animated: true)
         errorLabel.text = ""

@@ -41,8 +41,10 @@ class SignUpViewController: UIViewController {
     */
 
     @IBAction func signUpButtonIsClicked(_ sender: UIButton) {
-        let email = emailField.text!
-        let password = passwordField.text!
+        guard let email = emailField.text, let password = passwordField.text
+        else{
+            return
+        }
         signUpHelper.createAndSaveUser(email:email,password:password)
     }
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -65,11 +67,7 @@ extension SignUpViewController: SignUpDelegate {
     func signUpTheUser() {
         // if the user's email and password is validated
         // the user will be signed up and navigated to next screen
-   /*asli
-    let secondSignUpViewController = self.storyboard?.instantiateViewController(withIdentifier: "SecondSignUpViewController") as! SecondSignUpViewController
-    secondSignUpViewController.userEmail=self.emailField.text!
-    self.navigationController?.pushViewController(secondSignUpViewController, animated:true)
-    */
+
         emailField.delegate = self
         passwordField.delegate = self
         self.navigationController?.popToRootViewController(animated: true)

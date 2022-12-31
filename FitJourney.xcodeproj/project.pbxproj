@@ -50,6 +50,9 @@
 		0CA578962951E0F1005279D6 /* SignInDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA578952951E0F1005279D6 /* SignInDelegate.swift */; };
 		0CCD3EF12953431200E54A04 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0CCD3EF02953431200E54A04 /* FirebaseStorage */; };
 		0CCD3EF3295346CE00E54A04 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCD3EF2295346CE00E54A04 /* User.swift */; };
+		0CEE603A296057B600E4D43D /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEE6039296057B600E4D43D /* ResetPasswordViewController.swift */; };
+		0CEE603C29605BEE00E4D43D /* ResetPasswordHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEE603B29605BEE00E4D43D /* ResetPasswordHelper.swift */; };
+		0CEE603E2960622800E4D43D /* ResetPasswordDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEE603D2960622800E4D43D /* ResetPasswordDelegate.swift */; };
 		1E0D284A295484A300DBDC3F /* MyWeightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0D2849295484A300DBDC3F /* MyWeightsViewController.swift */; };
 		1E0D284C2954883300DBDC3F /* NewWeightEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0D284B2954883300DBDC3F /* NewWeightEntryViewController.swift */; };
 		1E10BB7929548EB70061BF4E /* NewWeightEntryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10BB7829548EB70061BF4E /* NewWeightEntryHelper.swift */; };
@@ -103,6 +106,9 @@
 		0CA578932951DAEE005279D6 /* SignUpDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDelegate.swift; sourceTree = "<group>"; };
 		0CA578952951E0F1005279D6 /* SignInDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDelegate.swift; sourceTree = "<group>"; };
 		0CCD3EF2295346CE00E54A04 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0CEE6039296057B600E4D43D /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		0CEE603B29605BEE00E4D43D /* ResetPasswordHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordHelper.swift; sourceTree = "<group>"; };
+		0CEE603D2960622800E4D43D /* ResetPasswordDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordDelegate.swift; sourceTree = "<group>"; };
 		16F69EE4EA6DB613C1D773D2 /* Pods-FitJourney-FitJourneyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourney-FitJourneyUITests.debug.xcconfig"; path = "Target Support Files/Pods-FitJourney-FitJourneyUITests/Pods-FitJourney-FitJourneyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		17441DD43FBDD3A5A6ED2494 /* Pods_FitJourney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitJourney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E0D2849295484A300DBDC3F /* MyWeightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWeightsViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +197,8 @@
 				1EEA1B112954C415001EE08A /* WeightEntry.swift */,
 				1EEA1B132954C470001EE08A /* MyWeightsDataDelegate.swift */,
 				1EEA1B152954F573001EE08A /* DateValueFormatter.swift */,
+				0CEE603B29605BEE00E4D43D /* ResetPasswordHelper.swift */,
+				0CEE603D2960622800E4D43D /* ResetPasswordDelegate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +210,7 @@
 				0C21B2792951C56D005236DA /* SignUpViewController.swift */,
 				1E0D2849295484A300DBDC3F /* MyWeightsViewController.swift */,
 				1E0D284B2954883300DBDC3F /* NewWeightEntryViewController.swift */,
+				0CEE6039296057B600E4D43D /* ResetPasswordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -566,6 +575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C818098295105A8003829D8 /* SignInViewController.swift in Sources */,
+				0CEE603E2960622800E4D43D /* ResetPasswordDelegate.swift in Sources */,
 				1E10BB7929548EB70061BF4E /* NewWeightEntryHelper.swift in Sources */,
 				0C818094295105A8003829D8 /* AppDelegate.swift in Sources */,
 				1EEA1B142954C470001EE08A /* MyWeightsDataDelegate.swift in Sources */,
@@ -578,6 +588,8 @@
 				0CA578942951DAEE005279D6 /* SignUpDelegate.swift in Sources */,
 				1EEA1B0E2954C178001EE08A /* WeightEntryTableViewCell.swift in Sources */,
 				0CCD3EF3295346CE00E54A04 /* User.swift in Sources */,
+				0CEE603A296057B600E4D43D /* ResetPasswordViewController.swift in Sources */,
+				0CEE603C29605BEE00E4D43D /* ResetPasswordHelper.swift in Sources */,
 				1E0D284A295484A300DBDC3F /* MyWeightsViewController.swift in Sources */,
 				1EEA1B162954F573001EE08A /* DateValueFormatter.swift in Sources */,
 				0CA578922951DACD005279D6 /* SignUpHelper.swift in Sources */,
