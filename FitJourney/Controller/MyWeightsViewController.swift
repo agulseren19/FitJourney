@@ -16,13 +16,14 @@ class MyWeightsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "My Weights"
+        //self.title = "My Weights"
         // Do any additional setup after loading the view.
         myWeightsDataSource.delegate = self
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         myWeightsDataSource.getListofWeightEntryFromFirebase()
     }
     

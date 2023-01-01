@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-1057" y="5"/>
         </scene>
-        <!--Reset Password-->
+        <!--Reset Password View Controller-->
         <scene sceneID="hWe-io-JzN">
             <objects>
                 <viewController id="3S3-Eq-qNc" customClass="ResetPasswordViewController" customModule="FitJourney" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,7 +100,7 @@
                             <constraint firstItem="PtK-NO-hoB" firstAttribute="top" secondItem="tZP-jz-b8Y" secondAttribute="bottom" constant="11" id="umK-p8-fRm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Reset Password" id="Lc3-7h-TzD"/>
+                    <navigationItem key="navigationItem" id="Lc3-7h-TzD"/>
                     <connections>
                         <outlet property="emailLabel" destination="PtK-NO-hoB" id="UcQ-vM-p2I"/>
                         <outlet property="errorLabel" destination="tZP-jz-b8Y" id="d8t-AL-tYw"/>
@@ -110,7 +110,7 @@
             </objects>
             <point key="canvasLocation" x="44" y="-692"/>
         </scene>
-        <!--Sign In-->
+        <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="FitJourney" customModuleProvider="target" sceneMemberID="viewController">
@@ -242,7 +242,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2KE-v8-4t8" secondAttribute="bottom" constant="136" id="z0d-1t-clJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Sign In" id="jnS-71-8CN"/>
+                    <navigationItem key="navigationItem" id="jnS-71-8CN"/>
                     <connections>
                         <outlet property="emailField" destination="8SQ-cS-fih" id="Mdh-6R-8Bt"/>
                         <outlet property="errorLabel" destination="XSz-Tf-rRK" id="edp-gk-rYo"/>
@@ -254,6 +254,59 @@
             </objects>
             <point key="canvasLocation" x="45" y="5"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="9Jk-qR-6h2">
+            <objects>
+                <tabBarController restorationIdentifier="Tabbar" storyboardIdentifier="Tabbar" id="4O3-s7-RVj" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Ch-dp-zAa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.74726301429999997" green="0.044088833030000003" blue="0.14435225730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="SXI-fu-GcZ" kind="relationship" relationship="viewControllers" id="JUO-Jb-JFc"/>
+                        <segue destination="4Dw-Bc-iru" kind="relationship" relationship="viewControllers" id="eEC-8Y-yom"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fwx-kT-WDA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1238" y="76"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="mUW-9S-e2s">
+            <objects>
+                <navigationController id="SXI-fu-GcZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="9tw-Yb-wcZ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YXI-DE-5bP">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EIN-Ht-Lqu" kind="relationship" relationship="rootViewController" id="0fy-6t-5JO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Opl-de-fXz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2211" y="-339"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="0dY-mN-q3S">
+            <objects>
+                <navigationController id="4Dw-Bc-iru" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="F5H-26-M6r"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iyk-ka-hqf">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fri-A0-n3k" kind="relationship" relationship="rootViewController" id="JXQ-9h-CvI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="veR-Vy-g3V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2210" y="380"/>
+        </scene>
         <!--Workouts-->
         <scene sceneID="mOf-4t-FGS">
             <objects>
@@ -264,52 +317,13 @@
                         <viewLayoutGuide key="safeArea" id="mms-tm-uyP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Workouts" image="dumbbell.fill" catalog="system" id="fVD-QV-CWa">
-                        <color key="badgeColor" red="0.74726301429999997" green="0.044088833030000003" blue="0.14435225730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBarItem>
-                    <navigationItem key="navigationItem" id="lda-0m-7Be"/>
+                    <tabBarItem key="tabBarItem" title="Workouts" image="dumbbell.fill" catalog="system" id="jWq-sf-eMe"/>
+                    <navigationItem key="navigationItem" title="Workouts" id="lda-0m-7Be"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZI-Vk-POd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3134" y="418"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="DpZ-pa-tEd">
-            <objects>
-                <navigationController id="DE9-BA-nAt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="HFM-rt-e0n">
-                        <color key="badgeColor" red="0.74726301429999997" green="0.044088833030000003" blue="0.14435225730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cVO-1L-Y4A">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="fri-A0-n3k" kind="relationship" relationship="rootViewController" id="ix6-b7-N0E"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gyA-c9-26r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2279" y="418"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="9c9-dv-wui">
-            <objects>
-                <navigationController id="P78-3n-ner" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zT2-2M-Jap">
-                        <color key="badgeColor" red="0.74726301429999997" green="0.044088833030000003" blue="0.14435225730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CRb-Y4-ktP">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="EIN-Ht-Lqu" kind="relationship" relationship="rootViewController" id="2cI-tx-8IL"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jsx-uG-hN1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2279" y="-339"/>
+            <point key="canvasLocation" x="3134" y="380"/>
         </scene>
         <!--My Weights-->
         <scene sceneID="JnX-Bk-RLK">
@@ -324,7 +338,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xut-TN-MyE">
-                                <rect key="frame" x="0.0" y="396" width="393" height="373"/>
+                                <rect key="frame" x="0.0" y="385" width="393" height="384"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WeightEntryCell" rowHeight="63" id="eJ0-Si-5cd" customClass="WeightEntryTableViewCell" customModule="FitJourney" customModuleProvider="target">
@@ -376,7 +390,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ls4-9u-mlM">
-                                <rect key="frame" x="16" y="367" width="231" height="21"/>
+                                <rect key="frame" x="16" y="356" width="231" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="FFM-EU-NiZ"/>
                                 </constraints>
@@ -392,7 +406,7 @@
                             <constraint firstItem="Xut-TN-MyE" firstAttribute="top" secondItem="Ls4-9u-mlM" secondAttribute="bottom" constant="8" symbolic="YES" id="ERL-Do-PaP"/>
                             <constraint firstItem="kxr-hZ-qpX" firstAttribute="height" secondItem="4bZ-3F-bTP" secondAttribute="height" multiplier="0.306338" constant="-17.999976000000004" id="I2B-f3-Kdi"/>
                             <constraint firstItem="kxr-hZ-qpX" firstAttribute="leading" secondItem="gdP-aq-3vX" secondAttribute="leading" id="WdK-3f-jIg"/>
-                            <constraint firstItem="Ls4-9u-mlM" firstAttribute="top" secondItem="kxr-hZ-qpX" secondAttribute="bottom" constant="21" id="eiO-xs-UsA"/>
+                            <constraint firstItem="Ls4-9u-mlM" firstAttribute="top" secondItem="kxr-hZ-qpX" secondAttribute="bottom" constant="10" id="eiO-xs-UsA"/>
                             <constraint firstItem="gdP-aq-3vX" firstAttribute="trailing" secondItem="Xut-TN-MyE" secondAttribute="trailing" id="hDT-od-djB"/>
                             <constraint firstItem="Xut-TN-MyE" firstAttribute="leading" secondItem="gdP-aq-3vX" secondAttribute="leading" id="lcb-HW-29C"/>
                             <constraint firstItem="gdP-aq-3vX" firstAttribute="trailing" secondItem="Ls4-9u-mlM" secondAttribute="trailing" constant="146" id="m18-V3-Vn1"/>
@@ -401,10 +415,8 @@
                             <constraint firstItem="kxr-hZ-qpX" firstAttribute="top" secondItem="gdP-aq-3vX" secondAttribute="top" id="zhM-Te-3zM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Weights" image="scalemass.fill" catalog="system" id="bmU-4D-xaC">
-                        <color key="badgeColor" red="0.74726301429999997" green="0.044088833030000003" blue="0.14435225730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBarItem>
-                    <navigationItem key="navigationItem" id="Iqc-Ap-KHg">
+                    <tabBarItem key="tabBarItem" title="My Weights" image="scalemass.fill" catalog="system" id="1MI-9a-bw9"/>
+                    <navigationItem key="navigationItem" title="My Weights" id="Iqc-Ap-KHg">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="X8a-sc-5Wu">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="j2g-zJ-MQl">
                                 <rect key="frame" x="302" y="0.0" width="75" height="44"/>
@@ -420,6 +432,7 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="myWeightsLineChartView" destination="kxr-hZ-qpX" id="0oG-L9-d0t"/>
                         <outlet property="myWeightsTableView" destination="Xut-TN-MyE" id="YWd-cn-GTV"/>
@@ -524,28 +537,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Op-us-Ydh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4235.8778625954201" y="-339.43661971830988"/>
+            <point key="canvasLocation" x="4065" y="-339"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="zi5-Fs-BuK">
-            <objects>
-                <tabBarController restorationIdentifier="Tabbar" storyboardIdentifier="Tabbar" id="4t9-pm-BcE" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GPP-7N-gha">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" red="0.74726301429999997" green="0.044088833030000003" blue="0.14435225730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="P78-3n-ner" kind="relationship" relationship="viewControllers" id="nUM-Mt-mVZ"/>
-                        <segue destination="DE9-BA-nAt" kind="relationship" relationship="viewControllers" id="yDx-2Y-PKc"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nhp-Jn-fWH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1236" y="5"/>
-        </scene>
-        <!--Sign Up-->
+        <!--Sign Up View Controller-->
         <scene sceneID="jV8-GS-w4d">
             <objects>
                 <viewController id="USk-3H-EAq" customClass="SignUpViewController" customModule="FitJourney" customModuleProvider="target" sceneMemberID="viewController">
@@ -570,7 +564,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="one-time-code"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qPq-dW-9eo">
-                                <rect key="frame" x="30" y="378.66666666666663" width="34" height="31"/>
+                                <rect key="frame" x="30" y="378.66666666666669" width="34" height="31"/>
                                 <color key="tintColor" red="0.74901960779999999" green="0.044088833030000003" blue="0.14435225730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="gX4-su-cdU"/>
@@ -645,7 +639,7 @@
                             <constraint firstItem="ty7-W7-jve" firstAttribute="centerY" secondItem="qPq-dW-9eo" secondAttribute="centerY" id="ymh-DZ-UeY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Sign Up" id="Hpg-r2-oNi"/>
+                    <navigationItem key="navigationItem" id="Hpg-r2-oNi"/>
                     <connections>
                         <outlet property="emailField" destination="ty7-W7-jve" id="789-O5-M0P"/>
                         <outlet property="errorText" destination="Boq-Mv-TTp" id="aG4-CF-5GK"/>

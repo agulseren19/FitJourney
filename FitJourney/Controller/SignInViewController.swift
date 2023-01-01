@@ -85,6 +85,7 @@ extension SignInViewController: SignInDelegate {
             passwordField.text = ""
             emailField.text = ""
         }
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
  
     }
     
