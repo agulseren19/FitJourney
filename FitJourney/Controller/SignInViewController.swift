@@ -80,7 +80,8 @@ extension SignInViewController: SignInDelegate {
         // the user will be signed in and navigated to home screen
         print("signed in")
         if  let tabBar: UITabBarController = self.storyboard?.instantiateViewController(withIdentifier: "Tabbar") as? UITabBarController{
-            self.navigationController?.pushViewController(tabBar, animated: true)
+            //self.navigationController?.pushViewController(tabBar, animated: true)
+            view?.window?.rootViewController = tabBar
             errorLabel.text = ""
             passwordField.text = ""
             emailField.text = ""

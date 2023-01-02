@@ -57,6 +57,10 @@
 		1E0D284C2954883300DBDC3F /* NewWeightEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0D284B2954883300DBDC3F /* NewWeightEntryViewController.swift */; };
 		1E10BB7929548EB70061BF4E /* NewWeightEntryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10BB7829548EB70061BF4E /* NewWeightEntryHelper.swift */; };
 		1E10BB7D29549FDA0061BF4E /* NewWeightEntryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10BB7C29549FDA0061BF4E /* NewWeightEntryDelegate.swift */; };
+		1E7C2B522962FE6B0007F30C /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C2B512962FE6B0007F30C /* LaunchScreenViewController.swift */; };
+		1E7C2B54296304680007F30C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C2B53296304680007F30C /* ProfileViewController.swift */; };
+		1E7C2B56296305000007F30C /* ProfileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C2B55296305000007F30C /* ProfileHelper.swift */; };
+		1E7C2B58296305120007F30C /* ProfileDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C2B57296305120007F30C /* ProfileDelegate.swift */; };
 		1EEA1B0E2954C178001EE08A /* WeightEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA1B0D2954C178001EE08A /* WeightEntryTableViewCell.swift */; };
 		1EEA1B102954C3D0001EE08A /* MyWeightsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA1B0F2954C3D0001EE08A /* MyWeightsDataSource.swift */; };
 		1EEA1B122954C415001EE08A /* WeightEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA1B112954C415001EE08A /* WeightEntry.swift */; };
@@ -115,6 +119,10 @@
 		1E0D284B2954883300DBDC3F /* NewWeightEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWeightEntryViewController.swift; sourceTree = "<group>"; };
 		1E10BB7829548EB70061BF4E /* NewWeightEntryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWeightEntryHelper.swift; sourceTree = "<group>"; };
 		1E10BB7C29549FDA0061BF4E /* NewWeightEntryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWeightEntryDelegate.swift; sourceTree = "<group>"; };
+		1E7C2B512962FE6B0007F30C /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		1E7C2B53296304680007F30C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1E7C2B55296305000007F30C /* ProfileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHelper.swift; sourceTree = "<group>"; };
+		1E7C2B57296305120007F30C /* ProfileDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDelegate.swift; sourceTree = "<group>"; };
 		1EEA1B0D2954C178001EE08A /* WeightEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeightEntryTableViewCell.swift; path = FitJourney/Model/WeightEntryTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		1EEA1B0F2954C3D0001EE08A /* MyWeightsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWeightsDataSource.swift; sourceTree = "<group>"; };
 		1EEA1B112954C415001EE08A /* WeightEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightEntry.swift; sourceTree = "<group>"; };
@@ -199,6 +207,8 @@
 				1EEA1B152954F573001EE08A /* DateValueFormatter.swift */,
 				0CEE603B29605BEE00E4D43D /* ResetPasswordHelper.swift */,
 				0CEE603D2960622800E4D43D /* ResetPasswordDelegate.swift */,
+				1E7C2B55296305000007F30C /* ProfileHelper.swift */,
+				1E7C2B57296305120007F30C /* ProfileDelegate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,6 +221,8 @@
 				1E0D2849295484A300DBDC3F /* MyWeightsViewController.swift */,
 				1E0D284B2954883300DBDC3F /* NewWeightEntryViewController.swift */,
 				0CEE6039296057B600E4D43D /* ResetPasswordViewController.swift */,
+				1E7C2B512962FE6B0007F30C /* LaunchScreenViewController.swift */,
+				1E7C2B53296304680007F30C /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -589,12 +601,16 @@
 				1EEA1B0E2954C178001EE08A /* WeightEntryTableViewCell.swift in Sources */,
 				0CCD3EF3295346CE00E54A04 /* User.swift in Sources */,
 				0CEE603A296057B600E4D43D /* ResetPasswordViewController.swift in Sources */,
+				1E7C2B54296304680007F30C /* ProfileViewController.swift in Sources */,
 				0CEE603C29605BEE00E4D43D /* ResetPasswordHelper.swift in Sources */,
 				1E0D284A295484A300DBDC3F /* MyWeightsViewController.swift in Sources */,
 				1EEA1B162954F573001EE08A /* DateValueFormatter.swift in Sources */,
 				0CA578922951DACD005279D6 /* SignUpHelper.swift in Sources */,
 				0C818096295105A8003829D8 /* SceneDelegate.swift in Sources */,
+				1E7C2B522962FE6B0007F30C /* LaunchScreenViewController.swift in Sources */,
 				0C21B27C2951D548005236DA /* SignInHelper.swift in Sources */,
+				1E7C2B58296305120007F30C /* ProfileDelegate.swift in Sources */,
+				1E7C2B56296305000007F30C /* ProfileHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
