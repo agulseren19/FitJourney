@@ -8,8 +8,8 @@ import Charts
 import UIKit
 
 class MyWeightsViewController: UIViewController {
-
-   
+    
+    
     @IBOutlet weak var myWeightsLineChartView: LineChartView!
     @IBOutlet weak var myWeightsTableView: UITableView!
     let myWeightsDataSource = MyWeightsDataSource()
@@ -40,17 +40,17 @@ class MyWeightsViewController: UIViewController {
         self.myWeightsLineChartView.animate(xAxisDuration: Double(myWeightsDataSource.getNumberOfWeightChartEntry())*0.03)
         
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 extension MyWeightsViewController: UITableViewDataSource{

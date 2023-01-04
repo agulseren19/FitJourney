@@ -12,7 +12,7 @@ import FirebaseAuth
 import GoogleSignIn
 import FirebaseStorage
 class SignInViewController: UIViewController {
-
+    
     @IBOutlet weak var exerciseImage: UIImageView!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var emailField: UITextField!
@@ -20,14 +20,14 @@ class SignInViewController: UIViewController {
     let signInHelper = SignInHelper()
     @IBAction func signInButtonClicked(_ sender: UIButton) {
         guard let userEmail = emailField.text,
-            let userPassword = passwordField.text
+              let userPassword = passwordField.text
         else{
             return
         }
         signInHelper.checkAndSignIn(userEmail: userEmail, userPassword: userPassword)
     }
     
- 
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,34 +36,30 @@ class SignInViewController: UIViewController {
         emailField.delegate = self
         passwordField.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(SignInViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-              NotificationCenter.default.addObserver(self, selector: #selector(SignInViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-       /* let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-              tap.cancelsTouchesInView = false
-              view.addGestureRecognizer(tap) */
-
+        NotificationCenter.default.addObserver(self, selector: #selector(SignInViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
     }
     override func viewWillDisappear(_ animated: Bool) {
-      //  self.navigationController?.setNavigationBarHidden(true, animated: animated) asli
     }
     @objc func keyboardWillShow(notification: NSNotification) {
         
         guard let  exerciseImage=exerciseImage , let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
         else {
-           return
+            return
         }
-      
-      self.view.frame.origin.y = 200 - keyboardSize.height
+        
+        self.view.frame.origin.y = 200 - keyboardSize.height
         exerciseImage.isHidden=true
-
+        
     }
     @objc func keyboardWillHide(notification: NSNotification) {
-      self.view.frame.origin.y = 0
+        self.view.frame.origin.y = 0
         exerciseImage.isHidden=false
-
+        
     }
-
-
-
+    
+    
+    
 }
 extension SignInViewController: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -80,14 +76,13 @@ extension SignInViewController: SignInDelegate {
         // the user will be signed in and navigated to home screen
         print("signed in")
         if  let tabBar: UITabBarController = self.storyboard?.instantiateViewController(withIdentifier: "Tabbar") as? UITabBarController{
-            //self.navigationController?.pushViewController(tabBar, animated: true)
             view?.window?.rootViewController = tabBar
             errorLabel.text = ""
             passwordField.text = ""
             emailField.text = ""
         }
         self.navigationController?.setNavigationBarHidden(true, animated: true)
- 
+        
     }
     
     func giveSignInError( errorDescription: String) {

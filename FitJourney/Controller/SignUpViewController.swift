@@ -12,7 +12,7 @@ import FirebaseAuth
 import GoogleSignIn
 import FirebaseStorage
 class SignUpViewController: UIViewController {
-
+    
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -25,21 +25,21 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         signUpHelper.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(SignUpViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-              NotificationCenter.default.addObserver(self, selector: #selector(SignUpViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SignUpViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         // Do any additional setup after loading the view.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
     @IBAction func signUpButtonIsClicked(_ sender: UIButton) {
         guard let email = emailField.text, let password = passwordField.text
         else{
@@ -51,23 +51,23 @@ class SignUpViewController: UIViewController {
         
         guard let  signUpImageView=signUpImageView , let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
         else {
-           return
+            return
         }
         self.view.frame.origin.y = 200 - keyboardSize.height
         signUpImageView.isHidden=true
-
+        
     }
     @objc func keyboardWillHide(notification: NSNotification) {
-      self.view.frame.origin.y = 0
+        self.view.frame.origin.y = 0
         signUpImageView.isHidden=false
-
+        
     }
 }
 extension SignUpViewController: SignUpDelegate {
     func signUpTheUser() {
         // if the user's email and password is validated
         // the user will be signed up and navigated to next screen
-
+        
         emailField.delegate = self
         passwordField.delegate = self
         self.navigationController?.popToRootViewController(animated: true)

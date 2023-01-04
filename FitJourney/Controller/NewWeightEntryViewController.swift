@@ -8,7 +8,7 @@
 import UIKit
 
 class NewWeightEntryViewController: UIViewController {
-
+    
     @IBOutlet weak var weightPickerView: UIPickerView!
     
     @IBOutlet weak var weightDatePicker: UIDatePicker!
@@ -32,15 +32,15 @@ class NewWeightEntryViewController: UIViewController {
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 extension NewWeightEntryViewController: UIPickerViewDataSource, UIPickerViewDelegate {
@@ -62,7 +62,7 @@ extension NewWeightEntryViewController: UIPickerViewDataSource, UIPickerViewDele
         }
         return String(newWeightEntryHelper.getGrArray(row: row))
     }
- 
+    
 }
 
 extension NewWeightEntryViewController: NewWeightEntryDelegate {

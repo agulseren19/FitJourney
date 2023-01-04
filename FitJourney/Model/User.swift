@@ -8,33 +8,23 @@
 import Foundation
 
 final class User: NSObject {
-   static let sharedInstance = User()
+    static let sharedInstance = User()
     
     var email : String = ""
-    //var password : String = ""
     var weights = [String]()
-
-   private override init() { }
-
+    
+    private override init() { }
+    
     func setEmail(email : String) {
-       self.email = email
-   }
+        self.email = email
+    }
     
     
     func getEmail() -> String {
         return self.email
     }
     
-  /*  func setPassword(password : String) {
-        self.password = password
-    }
-     
-     func getPassword() -> String {
-         return self.password
-     }
-   */
     
- 
     func setWeightsArray(weights : [String]) {
         self.weights = weights
     }
@@ -42,7 +32,7 @@ final class User: NSObject {
     
     func appendToWeightsArray(id : String) {
         self.weights.append(id)
-   }
+    }
     
     func getWeightsArray() -> [String] {
         return self.weights

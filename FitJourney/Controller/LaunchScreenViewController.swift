@@ -41,16 +41,16 @@ class LaunchScreenViewController: UIViewController {
         }
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     func animation (){
         UIView.animate(withDuration: 1){
             let size = self.view.frame.size.width * 1.5
@@ -61,7 +61,7 @@ class LaunchScreenViewController: UIViewController {
             self.iconImageView.alpha = 0
         }
     }
-
+    
 }
 
 extension LaunchScreenViewController: SignInDelegate {
@@ -75,7 +75,7 @@ extension LaunchScreenViewController: SignInDelegate {
             view?.window?.rootViewController = tabBar
         }
         self.navigationController?.setNavigationBarHidden(true, animated: true)
- 
+        
     }
     
     func giveSignInError( errorDescription: String) {

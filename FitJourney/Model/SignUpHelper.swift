@@ -28,19 +28,19 @@ class SignUpHelper{
                 self.delegate?.giveSignUpError(errorDescription: "You have already signed up or this email is incorrect.")
             }
             else {
-                        
-                        Auth.auth().currentUser?.sendEmailVerification { (error) in
-                            let db = Firestore.firestore()
-                            db.collection("users").document(email).setData([
-                                "email": email,
-                            //    "password": password,
-                                "weights": []
-                            ]) { err in
-                                if let err = err {
-                                    print("Error writing document")
-                                }
-                            }
-                            self.delegate?.signUpTheUser()
-                        }  }}               }
+                
+                Auth.auth().currentUser?.sendEmailVerification { (error) in
+                    let db = Firestore.firestore()
+                    db.collection("users").document(email).setData([
+                        "email": email,
+                        //    "password": password,
+                        "weights": []
+                    ]) { err in
+                        if let err = err {
+                            print("Error writing document")
+                        }
+                    }
+                    self.delegate?.signUpTheUser()
+                }  }}               }
 }
 

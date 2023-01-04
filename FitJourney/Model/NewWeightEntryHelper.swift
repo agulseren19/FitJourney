@@ -87,5 +87,5 @@ class NewWeightEntryHelper {
         }
         return grArray[row]
     }
-   
+    
 }

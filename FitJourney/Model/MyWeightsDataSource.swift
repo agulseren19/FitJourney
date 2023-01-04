@@ -29,16 +29,20 @@ class MyWeightsDataSource {
             let docRef2 = db.collection("weights").document(weightEntryId)
             docRef2.getDocument { (document, error) in
                 if let document = document, document.exists {
-                    var newWeightEntry = WeightEntry (
-                        date: (document.get("date") as! Timestamp).dateValue(),
-                        weight: document.get("weight") as! Double
-                    )
-                    var newChartDataEntry = ChartDataEntry(
-                        x: (document.get("date") as! Timestamp).dateValue().timeIntervalSince1970,
-                        y: document.get("weight") as! Double
-                    )
-                    self.weightEntryArray.append(newWeightEntry)
-                    self.weightChartEntryArray.append(newChartDataEntry)
+                    if let dateUnwrapped = (document.get("date") as? Timestamp)?.dateValue(),
+                       let weightUnwrapped = document.get("weight") as? Double
+                    {
+                        var newWeightEntry = WeightEntry (
+                            date: dateUnwrapped,
+                            weight: weightUnwrapped
+                        )
+                        var newChartDataEntry = ChartDataEntry(
+                            x: dateUnwrapped.timeIntervalSince1970,
+                            y: weightUnwrapped
+                        )
+                        self.weightEntryArray.append(newWeightEntry)
+                        self.weightChartEntryArray.append(newChartDataEntry)
+                    }
                     mutex = mutex + 1
                     if (mutex == User.sharedInstance.getWeightsArrayCount()){
                         self.weightEntryArray = self.weightEntryArray.sorted(by: { $0.date < $1.date })
