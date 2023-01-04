@@ -31,7 +31,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zIK-VR-wiU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1714" y="5"/>
+            <point key="canvasLocation" x="-2063" y="-11"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zcr-LJ-tv4">
@@ -47,18 +47,18 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="801-mg-A1y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2480" y="5"/>
+            <point key="canvasLocation" x="-2798" y="-11"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Gor-ee-R7p">
             <objects>
-                <navigationController id="8Gp-fM-auO" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="SignInNavigation" storyboardIdentifier="SignInNavigation" id="8Gp-fM-auO" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6ic-aX-oqY">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7GI-fg-S0s"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="X8q-dp-bWP"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dpq-di-Nrb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -398,7 +398,7 @@
                     <navigationItem key="navigationItem" title="Profile" id="dW9-sV-dLV">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="OVo-I5-UHJ">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="D5o-nT-9zQ">
-                                <rect key="frame" x="210" y="185" width="90" height="35"/>
+                                <rect key="frame" x="287" y="4.6666666666666679" width="90" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign Out"/>

@@ -82,7 +82,7 @@ extension LaunchScreenViewController: SignInDelegate {
     }
     
     func doNotSignInTheUser(){
-        if let signIn: UIViewController = self.storyboard?.instantiateViewController(withIdentifier: "SignIn") as? UIViewController{
+        if let signIn: UINavigationController = self.storyboard?.instantiateViewController(withIdentifier: "SignInNavigation") as? UINavigationController{
             view?.window?.rootViewController = signIn
         }
     }
