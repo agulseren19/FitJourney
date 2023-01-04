@@ -53,3 +53,12 @@ extension ResetPasswordViewController: ResetPasswordDelegate {
         errorLabel.adjustsFontSizeToFitWidth = true
     }
 }
+extension ResetPasswordViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+}
