@@ -70,6 +70,7 @@
 		8693DA38A3B45474F3E93054 /* Pods_FitJourney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9C23B21D2C04AC27C9B84A /* Pods_FitJourney.framework */; };
 		F222E8672969CF3E001C9F51 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F222E8662969CF3E001C9F51 /* Workout.swift */; };
 		F222E869296A4BD2001C9F51 /* WorkoutDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F222E868296A4BD2001C9F51 /* WorkoutDataSource.swift */; };
+		F2675742296B0307000538BA /* WorkoutDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2675741296B0307000538BA /* WorkoutDataDelegate.swift */; };
 		F2A06AED296900AA000F7DA1 /* WorkoutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A06AEC296900AA000F7DA1 /* WorkoutsTableViewCell.swift */; };
 		F2FCC9592968F656006C4B0A /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FCC9582968F656006C4B0A /* WorkoutsViewController.swift */; };
 		F51C9E3317134AFC8BFEC48D /* Pods_FitJourney_FitJourneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 268881655F0E05FBC9059A36 /* Pods_FitJourney_FitJourneyUITests.framework */; };
@@ -139,6 +140,7 @@
 		BB2286D0656A6FB8031A78ED /* Pods-FitJourney-FitJourneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourney-FitJourneyUITests.release.xcconfig"; path = "Target Support Files/Pods-FitJourney-FitJourneyUITests/Pods-FitJourney-FitJourneyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F222E8662969CF3E001C9F51 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		F222E868296A4BD2001C9F51 /* WorkoutDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDataSource.swift; sourceTree = "<group>"; };
+		F2675741296B0307000538BA /* WorkoutDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDataDelegate.swift; sourceTree = "<group>"; };
 		F2A06AEC296900AA000F7DA1 /* WorkoutsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutsTableViewCell.swift; path = FitJourney/Controller/WorkoutsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		F2FCC9582968F656006C4B0A /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		F4E8BB9C1DE114A74DE1BBBA /* Pods-FitJourneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourneyTests.debug.xcconfig"; path = "Target Support Files/Pods-FitJourneyTests/Pods-FitJourneyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				1E7C2B57296305120007F30C /* ProfileDelegate.swift */,
 				F222E8662969CF3E001C9F51 /* Workout.swift */,
 				F222E868296A4BD2001C9F51 /* WorkoutDataSource.swift */,
+				F2675741296B0307000538BA /* WorkoutDataDelegate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				0CCD3EF3295346CE00E54A04 /* User.swift in Sources */,
 				0CEE603A296057B600E4D43D /* ResetPasswordViewController.swift in Sources */,
 				1E7C2B54296304680007F30C /* ProfileViewController.swift in Sources */,
+				F2675742296B0307000538BA /* WorkoutDataDelegate.swift in Sources */,
 				0CEE603C29605BEE00E4D43D /* ResetPasswordHelper.swift in Sources */,
 				1E0D284A295484A300DBDC3F /* MyWeightsViewController.swift in Sources */,
 				1EEA1B162954F573001EE08A /* DateValueFormatter.swift in Sources */,
