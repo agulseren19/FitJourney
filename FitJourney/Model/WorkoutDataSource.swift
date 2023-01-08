@@ -9,17 +9,20 @@ import Foundation
 
 class WorkoutDataSource {
     
-    private var sectionTitles = ["Section 1", "Section 2", "Section 3"]
+    private let sectionTitles = ["Chest", "Biceps", "Triceps"]
+    private let muscleNamesForAPI = ["chest", "biceps", "triceps"]
     private var sectionData = [["Row 1", "Row 2"], ["Row 3", "Row 4", "Row 5"], ["Row 6"]]
     private var workoutArray: [Workout] = []
+    
+    var delegate: WorkoutDataDelegate?
     
     init() {
         
     }
     
-    func getListOfWorkouts() {
+    func getListOfWorkouts(muscleName: String) {
         let session = URLSession.shared
-        let muscle = "biceps".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let muscle = "\(muscleName)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         if let url = URL(string: "https://api.api-ninjas.com/v1/exercises?muscle="+muscle!) {
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
@@ -30,10 +33,10 @@ class WorkoutDataSource {
                     let decoder = JSONDecoder()
                     print(data)
                     self.workoutArray = try! decoder.decode([Workout].self, from: data)
-                    //print(workoutArray)
-                    //DispatchQueue.main.async {
-                    //    self.delegate?.playerListLoaded()
-                    //}
+                    print(self.workoutArray)
+                    DispatchQueue.main.async {
+                        self.delegate?.workoutListLoaded()
+                    }
                     
                 }
             }
@@ -55,4 +58,22 @@ class WorkoutDataSource {
         
     }
     
+    func getNumberOfWorkouts() -> Int {
+        return workoutArray.count
+    }
+    
+    func getWorkout(for index: Int) -> Workout? {
+        guard index < workoutArray.count else {
+            return nil
+        }
+        return workoutArray[index]
+    }
+    
+    func getSectionTitles() -> [String] {
+        return self.sectionTitles
+    }
+    
+    func getMuscleNamesForAPI() -> [String] {
+        return self.muscleNamesForAPI
+    }
 }

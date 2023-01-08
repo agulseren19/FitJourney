@@ -11,13 +11,15 @@ class WorkoutsViewController: UIViewController {
 
     @IBOutlet weak var workoutsTableView: UITableView!
     
-    let workoutDataSource = WorkoutDataSource()
+    private var workoutDataSource = WorkoutDataSource()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        workoutDataSource.getListOfWorkouts()
+        workoutDataSource.getListOfWorkouts(muscleName: workoutDataSource.getMuscleNamesForAPI()[0])
+        workoutDataSource.delegate = self
     }
     
 
@@ -38,15 +40,15 @@ extension WorkoutsViewController: UITableViewDataSource {
         // Number of muscle groups???
         return 1
     }
-    
+    /*
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         //return sectionTitles[section]
-        return ""
+        return workoutDataSource.getSectionTitles()[section]
     }
-    
+    */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return sectionData[section].count
-        return 1
+        return workoutDataSource.getNumberOfWorkouts()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,10 +57,21 @@ extension WorkoutsViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        //if let workout = 
+        if let workout = workoutDataSource.getWorkout(for: indexPath.row){
+            cell.workoutNameLabel.text = workout.name
+            cell.equipmentLabel.text = workout.equipment
+            cell.difficultyLabel.text = workout.difficulty
+        }
         
         return cell
     }
     
+    
+}
+
+extension WorkoutsViewController: WorkoutDataDelegate {
+    func workoutListLoaded() {
+        self.workoutsTableView.reloadData()
+    }
     
 }
