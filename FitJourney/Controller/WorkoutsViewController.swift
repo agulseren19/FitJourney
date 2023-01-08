@@ -11,10 +11,13 @@ class WorkoutsViewController: UIViewController {
 
     @IBOutlet weak var workoutsTableView: UITableView!
     
+    let workoutDataSource = WorkoutDataSource()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        workoutDataSource.getListOfWorkouts()
     }
     
 

@@ -69,6 +69,8 @@
 		81496E76C38CEBE52D9410DE /* Pods_FitJourney_FitJourneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 777C544B6E2AAE9B40850940 /* Pods_FitJourney_FitJourneyUITests.framework */; };
 		A45EA6CA29987C70D78ED556 /* Pods_FitJourney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17441DD43FBDD3A5A6ED2494 /* Pods_FitJourney.framework */; };
 		EAE55C97C027B4BA13ED2245 /* Pods_FitJourneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD057ADC121703A6A434826 /* Pods_FitJourneyTests.framework */; };
+		F222E8672969CF3E001C9F51 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F222E8662969CF3E001C9F51 /* Workout.swift */; };
+		F222E869296A4BD2001C9F51 /* WorkoutDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F222E868296A4BD2001C9F51 /* WorkoutDataSource.swift */; };
 		F2A06AED296900AA000F7DA1 /* WorkoutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A06AEC296900AA000F7DA1 /* WorkoutsTableViewCell.swift */; };
 		F2FCC9592968F656006C4B0A /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FCC9582968F656006C4B0A /* WorkoutsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -136,6 +138,8 @@
 		8C2F20332D0A58D3068C85DA /* Pods-FitJourney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourney.release.xcconfig"; path = "Target Support Files/Pods-FitJourney/Pods-FitJourney.release.xcconfig"; sourceTree = "<group>"; };
 		9BD057ADC121703A6A434826 /* Pods_FitJourneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitJourneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE9BCA61B3DD9CFC62A1E2F /* Pods-FitJourneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourneyTests.release.xcconfig"; path = "Target Support Files/Pods-FitJourneyTests/Pods-FitJourneyTests.release.xcconfig"; sourceTree = "<group>"; };
+		F222E8662969CF3E001C9F51 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		F222E868296A4BD2001C9F51 /* WorkoutDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDataSource.swift; sourceTree = "<group>"; };
 		F2A06AEC296900AA000F7DA1 /* WorkoutsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutsTableViewCell.swift; path = FitJourney/Controller/WorkoutsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		F2FCC9582968F656006C4B0A /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,6 +217,8 @@
 				0CEE603D2960622800E4D43D /* ResetPasswordDelegate.swift */,
 				1E7C2B55296305000007F30C /* ProfileHelper.swift */,
 				1E7C2B57296305120007F30C /* ProfileDelegate.swift */,
+				F222E8662969CF3E001C9F51 /* Workout.swift */,
+				F222E868296A4BD2001C9F51 /* WorkoutDataSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -597,6 +603,7 @@
 				F2FCC9592968F656006C4B0A /* WorkoutsViewController.swift in Sources */,
 				1E10BB7929548EB70061BF4E /* NewWeightEntryHelper.swift in Sources */,
 				0C818094295105A8003829D8 /* AppDelegate.swift in Sources */,
+				F222E869296A4BD2001C9F51 /* WorkoutDataSource.swift in Sources */,
 				1EEA1B142954C470001EE08A /* MyWeightsDataDelegate.swift in Sources */,
 				1E10BB7D29549FDA0061BF4E /* NewWeightEntryDelegate.swift in Sources */,
 				0CA578962951E0F1005279D6 /* SignInDelegate.swift in Sources */,
@@ -615,6 +622,7 @@
 				F2A06AED296900AA000F7DA1 /* WorkoutsTableViewCell.swift in Sources */,
 				0CA578922951DACD005279D6 /* SignUpHelper.swift in Sources */,
 				0C818096295105A8003829D8 /* SceneDelegate.swift in Sources */,
+				F222E8672969CF3E001C9F51 /* Workout.swift in Sources */,
 				1E7C2B522962FE6B0007F30C /* LaunchScreenViewController.swift in Sources */,
 				0C21B27C2951D548005236DA /* SignInHelper.swift in Sources */,
 				1E7C2B58296305120007F30C /* ProfileDelegate.swift in Sources */,
