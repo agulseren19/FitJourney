@@ -369,28 +369,34 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="164"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbU-4O-rny">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbU-4O-rny">
                                                     <rect key="frame" x="175" y="23" width="45" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Equipment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfY-Ky-TIQ">
-                                                    <rect key="frame" x="155" y="64" width="82" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kdy-UB-w9w">
+                                                    <rect key="frame" x="163.66666666666666" y="106" width="68" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kdy-UB-w9w">
-                                                    <rect key="frame" x="163" y="106" width="68" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Equipment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfY-Ky-TIQ">
+                                                    <rect key="frame" x="156.66666666666666" y="63" width="82" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Kdy-UB-w9w" secondAttribute="bottom" constant="37" id="Ij9-vr-fDS"/>
+                                                <constraint firstItem="TbU-4O-rny" firstAttribute="top" secondItem="WkB-Ux-kxF" secondAttribute="top" constant="23" id="TJX-iQ-92x"/>
+                                                <constraint firstItem="TbU-4O-rny" firstAttribute="centerX" secondItem="WkB-Ux-kxF" secondAttribute="centerX" constant="1" id="TNE-YD-n3X"/>
+                                                <constraint firstItem="Kdy-UB-w9w" firstAttribute="top" secondItem="YfY-Ky-TIQ" secondAttribute="bottom" constant="22" id="nqh-FV-8fU"/>
+                                                <constraint firstItem="Kdy-UB-w9w" firstAttribute="centerX" secondItem="YfY-Ky-TIQ" secondAttribute="centerX" id="tQS-Se-FZd"/>
+                                                <constraint firstItem="YfY-Ky-TIQ" firstAttribute="centerX" secondItem="TbU-4O-rny" secondAttribute="centerX" id="tsc-QC-qgP"/>
+                                                <constraint firstItem="YfY-Ky-TIQ" firstAttribute="top" secondItem="TbU-4O-rny" secondAttribute="bottom" constant="19" id="x75-JA-cHT"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="difficultyLabel" destination="Kdy-UB-w9w" id="mGC-5D-RFT"/>

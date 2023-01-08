@@ -29,7 +29,8 @@ class WorkoutDataSource {
                 if let data = data {
                     let decoder = JSONDecoder()
                     print(data)
-                    //self.playerArray = try! decoder.decode([Player].self, from: data)
+                    self.workoutArray = try! decoder.decode([Workout].self, from: data)
+                    //print(workoutArray)
                     //DispatchQueue.main.async {
                     //    self.delegate?.playerListLoaded()
                     //}

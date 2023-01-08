@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Workout {
+struct Workout: Decodable {
     let name: String
     let muscle: String
     let equipment: String

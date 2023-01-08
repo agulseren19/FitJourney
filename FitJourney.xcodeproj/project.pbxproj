@@ -66,13 +66,13 @@
 		1EEA1B122954C415001EE08A /* WeightEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA1B112954C415001EE08A /* WeightEntry.swift */; };
 		1EEA1B142954C470001EE08A /* MyWeightsDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA1B132954C470001EE08A /* MyWeightsDataDelegate.swift */; };
 		1EEA1B162954F573001EE08A /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA1B152954F573001EE08A /* DateValueFormatter.swift */; };
-		81496E76C38CEBE52D9410DE /* Pods_FitJourney_FitJourneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 777C544B6E2AAE9B40850940 /* Pods_FitJourney_FitJourneyUITests.framework */; };
-		A45EA6CA29987C70D78ED556 /* Pods_FitJourney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17441DD43FBDD3A5A6ED2494 /* Pods_FitJourney.framework */; };
-		EAE55C97C027B4BA13ED2245 /* Pods_FitJourneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD057ADC121703A6A434826 /* Pods_FitJourneyTests.framework */; };
+		6A6EC3B2052DDE41E5C8FF27 /* Pods_FitJourneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94303256F418D2C6CC73E8F6 /* Pods_FitJourneyTests.framework */; };
+		8693DA38A3B45474F3E93054 /* Pods_FitJourney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9C23B21D2C04AC27C9B84A /* Pods_FitJourney.framework */; };
 		F222E8672969CF3E001C9F51 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F222E8662969CF3E001C9F51 /* Workout.swift */; };
 		F222E869296A4BD2001C9F51 /* WorkoutDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F222E868296A4BD2001C9F51 /* WorkoutDataSource.swift */; };
 		F2A06AED296900AA000F7DA1 /* WorkoutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A06AEC296900AA000F7DA1 /* WorkoutsTableViewCell.swift */; };
 		F2FCC9592968F656006C4B0A /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FCC9582968F656006C4B0A /* WorkoutsViewController.swift */; };
+		F51C9E3317134AFC8BFEC48D /* Pods_FitJourney_FitJourneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 268881655F0E05FBC9059A36 /* Pods_FitJourney_FitJourneyUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +93,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09AE7ED1205FA904894518F0 /* Pods-FitJourneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourneyTests.debug.xcconfig"; path = "Target Support Files/Pods-FitJourneyTests/Pods-FitJourneyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0C21B2792951C56D005236DA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0C21B27B2951D548005236DA /* SignInHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInHelper.swift; sourceTree = "<group>"; };
 		0C818090295105A8003829D8 /* FitJourney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitJourney.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,8 +116,6 @@
 		0CEE6039296057B600E4D43D /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		0CEE603B29605BEE00E4D43D /* ResetPasswordHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordHelper.swift; sourceTree = "<group>"; };
 		0CEE603D2960622800E4D43D /* ResetPasswordDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordDelegate.swift; sourceTree = "<group>"; };
-		16F69EE4EA6DB613C1D773D2 /* Pods-FitJourney-FitJourneyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourney-FitJourneyUITests.debug.xcconfig"; path = "Target Support Files/Pods-FitJourney-FitJourneyUITests/Pods-FitJourney-FitJourneyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		17441DD43FBDD3A5A6ED2494 /* Pods_FitJourney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitJourney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E0D2849295484A300DBDC3F /* MyWeightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWeightsViewController.swift; sourceTree = "<group>"; };
 		1E0D284B2954883300DBDC3F /* NewWeightEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWeightEntryViewController.swift; sourceTree = "<group>"; };
 		1E10BB7829548EB70061BF4E /* NewWeightEntryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWeightEntryHelper.swift; sourceTree = "<group>"; };
@@ -132,16 +129,19 @@
 		1EEA1B112954C415001EE08A /* WeightEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightEntry.swift; sourceTree = "<group>"; };
 		1EEA1B132954C470001EE08A /* MyWeightsDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWeightsDataDelegate.swift; sourceTree = "<group>"; };
 		1EEA1B152954F573001EE08A /* DateValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
-		46CA33BD5B1DDC96340E1365 /* Pods-FitJourney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourney.debug.xcconfig"; path = "Target Support Files/Pods-FitJourney/Pods-FitJourney.debug.xcconfig"; sourceTree = "<group>"; };
-		72DFE31FCB5D8D8FEF93E178 /* Pods-FitJourney-FitJourneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourney-FitJourneyUITests.release.xcconfig"; path = "Target Support Files/Pods-FitJourney-FitJourneyUITests/Pods-FitJourney-FitJourneyUITests.release.xcconfig"; sourceTree = "<group>"; };
-		777C544B6E2AAE9B40850940 /* Pods_FitJourney_FitJourneyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitJourney_FitJourneyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C2F20332D0A58D3068C85DA /* Pods-FitJourney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourney.release.xcconfig"; path = "Target Support Files/Pods-FitJourney/Pods-FitJourney.release.xcconfig"; sourceTree = "<group>"; };
-		9BD057ADC121703A6A434826 /* Pods_FitJourneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitJourneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAE9BCA61B3DD9CFC62A1E2F /* Pods-FitJourneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourneyTests.release.xcconfig"; path = "Target Support Files/Pods-FitJourneyTests/Pods-FitJourneyTests.release.xcconfig"; sourceTree = "<group>"; };
+		268881655F0E05FBC9059A36 /* Pods_FitJourney_FitJourneyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitJourney_FitJourneyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77CFAF3CE61DD01F4CE4EC78 /* Pods-FitJourney-FitJourneyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourney-FitJourneyUITests.debug.xcconfig"; path = "Target Support Files/Pods-FitJourney-FitJourneyUITests/Pods-FitJourney-FitJourneyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		858642C67C63866E513FD52E /* Pods-FitJourneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourneyTests.release.xcconfig"; path = "Target Support Files/Pods-FitJourneyTests/Pods-FitJourneyTests.release.xcconfig"; sourceTree = "<group>"; };
+		94303256F418D2C6CC73E8F6 /* Pods_FitJourneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitJourneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9841F7655B0395201FE2C831 /* Pods-FitJourney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourney.release.xcconfig"; path = "Target Support Files/Pods-FitJourney/Pods-FitJourney.release.xcconfig"; sourceTree = "<group>"; };
+		9CA85881422CE93C8D32CC52 /* Pods-FitJourney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourney.debug.xcconfig"; path = "Target Support Files/Pods-FitJourney/Pods-FitJourney.debug.xcconfig"; sourceTree = "<group>"; };
+		9D9C23B21D2C04AC27C9B84A /* Pods_FitJourney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitJourney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB2286D0656A6FB8031A78ED /* Pods-FitJourney-FitJourneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourney-FitJourneyUITests.release.xcconfig"; path = "Target Support Files/Pods-FitJourney-FitJourneyUITests/Pods-FitJourney-FitJourneyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F222E8662969CF3E001C9F51 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		F222E868296A4BD2001C9F51 /* WorkoutDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDataSource.swift; sourceTree = "<group>"; };
 		F2A06AEC296900AA000F7DA1 /* WorkoutsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutsTableViewCell.swift; path = FitJourney/Controller/WorkoutsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		F2FCC9582968F656006C4B0A /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
+		F4E8BB9C1DE114A74DE1BBBA /* Pods-FitJourneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitJourneyTests.debug.xcconfig"; path = "Target Support Files/Pods-FitJourneyTests/Pods-FitJourneyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,11 +172,11 @@
 				0C0D5EFA2953517F0034F6EB /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				0C0D5F06295351800034F6EB /* FirebaseRemoteConfigSwift in Frameworks */,
 				0C0D5F08295351800034F6EB /* FirebaseStorageCombine-Community in Frameworks */,
-				A45EA6CA29987C70D78ED556 /* Pods_FitJourney.framework in Frameworks */,
 				0C0D5EE22953517E0034F6EB /* FirebaseAppDistribution-Beta in Frameworks */,
 				0C0D5F04295351800034F6EB /* FirebaseRemoteConfig in Frameworks */,
 				0C0D5EEE2953517F0034F6EB /* FirebaseDynamicLinks in Frameworks */,
 				0C0D5EF82953517F0034F6EB /* FirebaseInAppMessaging-Beta in Frameworks */,
+				8693DA38A3B45474F3E93054 /* Pods_FitJourney.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +184,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAE55C97C027B4BA13ED2245 /* Pods_FitJourneyTests.framework in Frameworks */,
+				6A6EC3B2052DDE41E5C8FF27 /* Pods_FitJourneyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +192,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81496E76C38CEBE52D9410DE /* Pods_FitJourney_FitJourneyUITests.framework in Frameworks */,
+				F51C9E3317134AFC8BFEC48D /* Pods_FitJourney_FitJourneyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +255,7 @@
 				0C8180B3295105AC003829D8 /* FitJourneyUITests */,
 				0C818091295105A8003829D8 /* Products */,
 				19BAEA6A6E1BEF98E1031E37 /* Pods */,
-				21B7E956EEDA60CF2087812C /* Frameworks */,
+				26445A596E59E7CDC3BDB070 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -306,22 +306,22 @@
 		19BAEA6A6E1BEF98E1031E37 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				46CA33BD5B1DDC96340E1365 /* Pods-FitJourney.debug.xcconfig */,
-				8C2F20332D0A58D3068C85DA /* Pods-FitJourney.release.xcconfig */,
-				16F69EE4EA6DB613C1D773D2 /* Pods-FitJourney-FitJourneyUITests.debug.xcconfig */,
-				72DFE31FCB5D8D8FEF93E178 /* Pods-FitJourney-FitJourneyUITests.release.xcconfig */,
-				09AE7ED1205FA904894518F0 /* Pods-FitJourneyTests.debug.xcconfig */,
-				CAE9BCA61B3DD9CFC62A1E2F /* Pods-FitJourneyTests.release.xcconfig */,
+				9CA85881422CE93C8D32CC52 /* Pods-FitJourney.debug.xcconfig */,
+				9841F7655B0395201FE2C831 /* Pods-FitJourney.release.xcconfig */,
+				77CFAF3CE61DD01F4CE4EC78 /* Pods-FitJourney-FitJourneyUITests.debug.xcconfig */,
+				BB2286D0656A6FB8031A78ED /* Pods-FitJourney-FitJourneyUITests.release.xcconfig */,
+				F4E8BB9C1DE114A74DE1BBBA /* Pods-FitJourneyTests.debug.xcconfig */,
+				858642C67C63866E513FD52E /* Pods-FitJourneyTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		21B7E956EEDA60CF2087812C /* Frameworks */ = {
+		26445A596E59E7CDC3BDB070 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				17441DD43FBDD3A5A6ED2494 /* Pods_FitJourney.framework */,
-				777C544B6E2AAE9B40850940 /* Pods_FitJourney_FitJourneyUITests.framework */,
-				9BD057ADC121703A6A434826 /* Pods_FitJourneyTests.framework */,
+				9D9C23B21D2C04AC27C9B84A /* Pods_FitJourney.framework */,
+				268881655F0E05FBC9059A36 /* Pods_FitJourney_FitJourneyUITests.framework */,
+				94303256F418D2C6CC73E8F6 /* Pods_FitJourneyTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -333,11 +333,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C8180BA295105AC003829D8 /* Build configuration list for PBXNativeTarget "FitJourney" */;
 			buildPhases = (
-				1CCBDACC937709A1E3FC3F23 /* [CP] Check Pods Manifest.lock */,
+				94FB3A1EA2A924C3DAF81370 /* [CP] Check Pods Manifest.lock */,
 				0C81808C295105A7003829D8 /* Sources */,
 				0C81808D295105A7003829D8 /* Frameworks */,
 				0C81808E295105A7003829D8 /* Resources */,
-				48BE6468FAD2F7379BF07885 /* [CP] Embed Pods Frameworks */,
+				8CB1FEA4E990B8F12A62A303 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -381,7 +381,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C8180BD295105AC003829D8 /* Build configuration list for PBXNativeTarget "FitJourneyTests" */;
 			buildPhases = (
-				85E3BAF9FF58350DC53848B0 /* [CP] Check Pods Manifest.lock */,
+				703D00774127ED067CDEA40F /* [CP] Check Pods Manifest.lock */,
 				0C8180A2295105AC003829D8 /* Sources */,
 				0C8180A3295105AC003829D8 /* Frameworks */,
 				0C8180A4295105AC003829D8 /* Resources */,
@@ -400,11 +400,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C8180C0295105AC003829D8 /* Build configuration list for PBXNativeTarget "FitJourneyUITests" */;
 			buildPhases = (
-				B294FE560F12323FDC65DBB9 /* [CP] Check Pods Manifest.lock */,
+				02513B3A1015737A27E489FA /* [CP] Check Pods Manifest.lock */,
 				0C8180AC295105AC003829D8 /* Sources */,
 				0C8180AD295105AC003829D8 /* Frameworks */,
 				0C8180AE295105AC003829D8 /* Resources */,
-				AE86A97B03CE083F6DA2264B /* [CP] Embed Pods Frameworks */,
+				897BF45424D33CED89D9D0C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -491,7 +491,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1CCBDACC937709A1E3FC3F23 /* [CP] Check Pods Manifest.lock */ = {
+		02513B3A1015737A27E489FA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -506,31 +506,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FitJourney-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FitJourney-FitJourneyUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		48BE6468FAD2F7379BF07885 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FitJourney/Pods-FitJourney-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FitJourney/Pods-FitJourney-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FitJourney/Pods-FitJourney-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		85E3BAF9FF58350DC53848B0 /* [CP] Check Pods Manifest.lock */ = {
+		703D00774127ED067CDEA40F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -552,7 +535,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AE86A97B03CE083F6DA2264B /* [CP] Embed Pods Frameworks */ = {
+		897BF45424D33CED89D9D0C3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -569,7 +552,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FitJourney-FitJourneyUITests/Pods-FitJourney-FitJourneyUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B294FE560F12323FDC65DBB9 /* [CP] Check Pods Manifest.lock */ = {
+		8CB1FEA4E990B8F12A62A303 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitJourney/Pods-FitJourney-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitJourney/Pods-FitJourney-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FitJourney/Pods-FitJourney-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94FB3A1EA2A924C3DAF81370 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -584,7 +584,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FitJourney-FitJourneyUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FitJourney-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -798,7 +798,7 @@
 		};
 		0C8180BB295105AC003829D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46CA33BD5B1DDC96340E1365 /* Pods-FitJourney.debug.xcconfig */;
+			baseConfigurationReference = 9CA85881422CE93C8D32CC52 /* Pods-FitJourney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -828,7 +828,7 @@
 		};
 		0C8180BC295105AC003829D8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C2F20332D0A58D3068C85DA /* Pods-FitJourney.release.xcconfig */;
+			baseConfigurationReference = 9841F7655B0395201FE2C831 /* Pods-FitJourney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -858,7 +858,7 @@
 		};
 		0C8180BE295105AC003829D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09AE7ED1205FA904894518F0 /* Pods-FitJourneyTests.debug.xcconfig */;
+			baseConfigurationReference = F4E8BB9C1DE114A74DE1BBBA /* Pods-FitJourneyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -879,7 +879,7 @@
 		};
 		0C8180BF295105AC003829D8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAE9BCA61B3DD9CFC62A1E2F /* Pods-FitJourneyTests.release.xcconfig */;
+			baseConfigurationReference = 858642C67C63866E513FD52E /* Pods-FitJourneyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -900,7 +900,7 @@
 		};
 		0C8180C1295105AC003829D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16F69EE4EA6DB613C1D773D2 /* Pods-FitJourney-FitJourneyUITests.debug.xcconfig */;
+			baseConfigurationReference = 77CFAF3CE61DD01F4CE4EC78 /* Pods-FitJourney-FitJourneyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -919,7 +919,7 @@
 		};
 		0C8180C2295105AC003829D8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72DFE31FCB5D8D8FEF93E178 /* Pods-FitJourney-FitJourneyUITests.release.xcconfig */;
+			baseConfigurationReference = BB2286D0656A6FB8031A78ED /* Pods-FitJourney-FitJourneyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
