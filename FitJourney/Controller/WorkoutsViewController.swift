@@ -18,8 +18,13 @@ class WorkoutsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        workoutDataSource.getListOfWorkouts(muscleName: workoutDataSource.getMuscleNamesForAPI()[0])
         workoutDataSource.delegate = self
+        print("QQ1")
+        workoutDataSource.getAllListsOfWorkouts { string in
+            print("Viewcontrollerda complete içindeyiz")
+            print(string)
+        }
+        print("QQ2")
     }
     
 
@@ -38,26 +43,37 @@ class WorkoutsViewController: UIViewController {
 extension WorkoutsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         // Number of muscle groups???
-        return 1
+        print("XX1")
+        return workoutDataSource.getNumberOfMuscleSections()
     }
-    /*
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         //return sectionTitles[section]
+        print("XX2")
         return workoutDataSource.getSectionTitles()[section]
     }
-    */
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return sectionData[section].count
-        return workoutDataSource.getNumberOfWorkouts()
+        print("XX3")
+        if workoutDataSource.getAllMusclesWorkoutArray().isEmpty {
+            return 0
+        } else{
+            return workoutDataSource.getAllMusclesWorkoutArray()[section].count
+        }
+        
+        // sectionData is allmusclesworkoutarray
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("XX4")
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "WorkoutCell") as? WorkoutsTableViewCell
         else{
             return UITableViewCell()
         }
         
-        if let workout = workoutDataSource.getWorkout(for: indexPath.row){
+        if let workout = workoutDataSource.getWorkout(section: indexPath.section, row: indexPath.row){
             cell.workoutNameLabel.text = workout.name
             cell.equipmentLabel.text = workout.equipment
             cell.difficultyLabel.text = workout.difficulty
@@ -71,6 +87,7 @@ extension WorkoutsViewController: UITableViewDataSource {
 
 extension WorkoutsViewController: WorkoutDataDelegate {
     func workoutListLoaded() {
+        print("QQ3")
         self.workoutsTableView.reloadData()
     }
     
