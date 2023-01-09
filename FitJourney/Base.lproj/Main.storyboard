@@ -458,7 +458,7 @@
             </objects>
             <point key="canvasLocation" x="3133.5877862595416" y="379.57746478873241"/>
         </scene>
-        <!--Workout Details View Controller-->
+        <!--Workout Detail-->
         <scene sceneID="4wH-qH-1Q8">
             <objects>
                 <viewController id="zxJ-KA-ca8" customClass="WorkoutDetailsViewController" customModule="FitJourney" customModuleProvider="target" sceneMemberID="viewController">
@@ -578,7 +578,7 @@
                             <constraint firstItem="t8q-FD-pm8" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="2tR-U8-4gK" secondAttribute="trailing" constant="238" id="xfP-i7-OK2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qPJ-iY-K2D"/>
+                    <navigationItem key="navigationItem" title="Workout Detail" id="qPJ-iY-K2D"/>
                     <connections>
                         <outlet property="difficultyNameLabel" destination="RVL-cn-a1P" id="S4z-UW-fk6"/>
                         <outlet property="equipmentNameLabel" destination="2tR-U8-4gK" id="POG-0b-baX"/>
