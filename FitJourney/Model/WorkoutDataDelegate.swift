@@ -9,5 +9,11 @@ import Foundation
 
 protocol WorkoutDataDelegate{
     func workoutListLoaded()
+    func workoutDetailsLoaded(workout: Workout)
+}
+
+extension WorkoutDataDelegate {
+    func workoutListLoaded(){}
+    func workoutDetailsLoaded(workout: Workout){}
     
 }

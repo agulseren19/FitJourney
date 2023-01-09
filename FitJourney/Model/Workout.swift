@@ -12,4 +12,5 @@ struct Workout: Decodable {
     let muscle: String
     let equipment: String
     let difficulty: String
+    let instructions: String
 }
