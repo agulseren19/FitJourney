@@ -13,7 +13,6 @@ class WorkoutsViewController: UIViewController {
     
     private var workoutDataSource = WorkoutDataSource()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,9 +25,7 @@ class WorkoutsViewController: UIViewController {
         }
         print("QQ2")
     }
-    
 
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -38,12 +35,13 @@ class WorkoutsViewController: UIViewController {
         if let cell = sender as? UITableViewCell,
            let indexPath = workoutsTableView.indexPath(for: cell),
            let workoutDetailsController = segue.destination as? WorkoutDetailsViewController {
+            
             workoutDetailsController.section = indexPath.section
             workoutDetailsController.row = indexPath.row
+            workoutDetailsController.workoutDataSource = self.workoutDataSource
         }
     }
     
-
 }
 
 extension WorkoutsViewController: UITableViewDataSource {
@@ -67,8 +65,6 @@ extension WorkoutsViewController: UITableViewDataSource {
         } else{
             return workoutDataSource.getAllMusclesWorkoutArray()[section].count
         }
-        
-        // sectionData is allmusclesworkoutarray
         
     }
     

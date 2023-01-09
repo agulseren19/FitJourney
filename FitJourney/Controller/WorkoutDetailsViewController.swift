@@ -18,30 +18,34 @@ class WorkoutDetailsViewController: UIViewController {
     var section: Int?
     var row: Int?
     
-    let workoutDataSource = WorkoutDataSource()
+    var workoutDataSource: WorkoutDataSource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view. 
+        // Do any additional setup after loading the view.
+        //workoutDataSource.delegate = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if let section = section,
-           let row = row,
-           let workout = workoutDataSource.getWorkout(section: section, row: row){
+        if let sectionIndex = section,
+           let rowIndex = row,
+           let workoutDataSource = workoutDataSource,
+           let workout = workoutDataSource.getWorkout(section: sectionIndex, row: rowIndex){
             workoutNameLabel.text = workout.name
             muscleNameLabel.text = workout.muscle
             equipmentNameLabel.text = workout.equipment
             difficultyNameLabel.text = workout.difficulty
             instructionsTextView.text = workout.instructions
-        } else {
+        }else {
             workoutNameLabel.text = "N/A"
             muscleNameLabel.text = "N/A"
             equipmentNameLabel.text = "N/A"
             difficultyNameLabel.text = "N/A"
             instructionsTextView.text = "N/A"
         }
+        
     }
 
     /*

@@ -56,6 +56,42 @@ class WorkoutDataSource {
         
     }
     
+    func getWorkoutDetail(with name: String) {
+        let session = URLSession.shared
+        let nameForURL = name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        if let url = URL(string: "https://api.api-ninjas.com/v1/exercises?name="+nameForURL!) {
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.setValue("8ZhKD6CGxE5oiY9JaXuzJQ==E1hegZPhxnJckxia", forHTTPHeaderField: "X-Api-Key")
+            let dataTask = session.dataTask(with: request) { data, response, error in
+                if let data = data {
+                    let decoder = JSONDecoder()
+                    print("buraya bak")
+                    print(data)
+                    let workout: Workout = try! decoder.decode(Workout.self, from: data)
+                    //self.singleMuscleWorkoutArray = try! decoder.decode([Workout].self, from: data)
+                    //self.allMusclesWorkoutArray.append(self.singleMuscleWorkoutArray)
+                    //print(self.singleMuscleWorkoutArray)
+                    //self.allMusclesWorkoutArray.append(workoutArray)
+                    DispatchQueue.main.async {
+                        self.delegate?.workoutDetailsLoaded(workout: workout)
+                    }
+                    //print("BB")
+                    
+                    /*
+                    self.mutex = self.mutex + 1
+                    if self.mutex == 3 {
+                        print("DD")
+                        self.delegate?.workoutListLoaded()
+                    }
+                    */
+                }
+            }
+            dataTask.resume()
+        }
+    }
+    
     func getAllListsOfWorkouts(completion: @escaping (String) -> Void){
         let dispatchGroup = DispatchGroup()
   
@@ -89,6 +125,7 @@ class WorkoutDataSource {
     }
     
     func getWorkout(section: Int, row: Int) -> Workout? {
+        print(allMusclesWorkoutArray)
         guard section < allMusclesWorkoutArray.count else {
             return nil
         }
@@ -97,6 +134,8 @@ class WorkoutDataSource {
         }
         return allMusclesWorkoutArray[section][row]
     }
+    
+    
     
     func getSectionTitles() -> [String] {
         return self.sectionTitles
