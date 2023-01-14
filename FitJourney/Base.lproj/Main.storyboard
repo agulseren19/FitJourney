@@ -357,9 +357,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="leE-iT-yV1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="leE-iT-yV1">
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WorkoutCell" rowHeight="119" id="77f-cc-lIa" customClass="WorkoutsTableViewCell" customModule="FitJourney" customModuleProvider="target">
@@ -446,6 +445,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mms-tm-uyP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="leE-iT-yV1" firstAttribute="leading" secondItem="mms-tm-uyP" secondAttribute="leading" id="3G5-6k-Shq"/>
+                            <constraint firstItem="mms-tm-uyP" firstAttribute="bottom" secondItem="leE-iT-yV1" secondAttribute="bottom" id="3uq-sw-Unh"/>
+                            <constraint firstItem="mms-tm-uyP" firstAttribute="trailing" secondItem="leE-iT-yV1" secondAttribute="trailing" id="Beb-Td-EJY"/>
+                            <constraint firstItem="leE-iT-yV1" firstAttribute="top" secondItem="mms-tm-uyP" secondAttribute="top" id="DON-sJ-Q2Z"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Workouts" image="dumbbell.fill" catalog="system" id="jWq-sf-eMe"/>
                     <navigationItem key="navigationItem" title="Workouts" id="lda-0m-7Be"/>
