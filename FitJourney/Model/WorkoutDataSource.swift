@@ -10,11 +10,11 @@ import Foundation
 class WorkoutDataSource {
     
     var mutex = 0
-    private let sectionTitles = ["Chest", "Biceps", "Triceps"]
-    private let muscleNamesForAPI = ["chest", "biceps", "triceps"]
-    private var sectionData = [["Row 1", "Row 2"], ["Row 3", "Row 4", "Row 5"], ["Row 6"]]
+    private let sectionTitles = ["Chest", "Biceps", "Triceps", "Middle Back", "Lower Back"]
+    private let muscleNamesForAPI = ["chest", "biceps", "triceps", "middle_back", "lower_back"]
+    //private var sectionData = [["Row 1", "Row 2"], ["Row 3", "Row 4", "Row 5"], ["Row 6"]]
     private var singleMuscleWorkoutArray: [Workout] = []
-    private var allMusclesWorkoutArray: [[Workout]] = []
+    private var allMusclesWorkoutArray: [[Workout]] = [ [], [], [], [], [] ]
     
     var delegate: WorkoutDataDelegate?
     
@@ -99,9 +99,13 @@ class WorkoutDataSource {
             print("AA \(muscle)")
             dispatchGroup.enter()
             self.getListOfWorkouts(for: muscle) { workoutArray in
-                self.allMusclesWorkoutArray.append(workoutArray)
-                print("LEAVE")
-                dispatchGroup.leave()
+                if let muscleIndex = self.muscleNamesForAPI.firstIndex(of: muscle){
+                    self.allMusclesWorkoutArray[muscleIndex] = workoutArray
+                    print("LEAVE")
+                    dispatchGroup.leave()
+                }
+                //self.allMusclesWorkoutArray.append(workoutArray)
+                
             }
             print("CC \(muscle)")
             
