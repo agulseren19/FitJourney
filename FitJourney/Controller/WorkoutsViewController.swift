@@ -7,9 +7,12 @@
 
 import UIKit
 
-class WorkoutsViewController: UIViewController {
+class WorkoutsViewController: UIViewController, UISearchResultsUpdating {
 
     @IBOutlet weak var workoutsTableView: UITableView!
+    
+    @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView!
+    let searchController = UISearchController()
     
     private var workoutDataSource = WorkoutDataSource()
     
@@ -17,13 +20,14 @@ class WorkoutsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        loadingActivityIndicator.isHidden = false
+        workoutsTableView.isHidden = true
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
         workoutDataSource.delegate = self
-        print("QQ1")
         workoutDataSource.getAllListsOfWorkouts { string in
-            print("Viewcontrollerda complete içindeyiz")
-            print(string)
         }
-        print("QQ2")
+        
     }
 
     // MARK: - Navigation
@@ -42,34 +46,36 @@ class WorkoutsViewController: UIViewController {
         }
     }
     
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text
+        else {
+            return
+        }
+        
+        self.workoutDataSource.filterDataWithSearchBar(searchText: text)
+    }
+    
 }
 
 extension WorkoutsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        // Number of muscle groups???
-        print("XX1")
         return workoutDataSource.getNumberOfMuscleSections()
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        //return sectionTitles[section]
-        print("XX2")
         return workoutDataSource.getSectionTitles()[section]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return sectionData[section].count
-        print("XX3")
-        if workoutDataSource.getAllMusclesWorkoutArray().isEmpty {
+        if workoutDataSource.getFilteredAllMusclesWorkoutArray().isEmpty {
             return 0
         } else{
-            return workoutDataSource.getAllMusclesWorkoutArray()[section].count
+            return workoutDataSource.getFilteredAllMusclesWorkoutArray()[section].count
         }
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("XX4")
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "WorkoutCell") as? WorkoutsTableViewCell
         else{
             return UITableViewCell()
@@ -83,13 +89,13 @@ extension WorkoutsViewController: UITableViewDataSource {
         
         return cell
     }
-    
-    
+ 
 }
 
 extension WorkoutsViewController: WorkoutDataDelegate {
     func workoutListLoaded() {
-        print("QQ3")
+        loadingActivityIndicator.isHidden = true
+        workoutsTableView.isHidden = false
         self.workoutsTableView.reloadData()
     }
     
