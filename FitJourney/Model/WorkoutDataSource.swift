@@ -9,12 +9,12 @@ import Foundation
 
 class WorkoutDataSource {
     
-    var mutex = 0
     private let sectionTitles = ["Chest", "Biceps", "Triceps", "Middle Back", "Lower Back"]
     private let muscleNamesForAPI = ["chest", "biceps", "triceps", "middle_back", "lower_back"]
-    //private var sectionData = [["Row 1", "Row 2"], ["Row 3", "Row 4", "Row 5"], ["Row 6"]]
+    
     private var singleMuscleWorkoutArray: [Workout] = []
     private var allMusclesWorkoutArray: [[Workout]] = [ [], [], [], [], [] ]
+    private var filteredAllMusclesWorkoutArray: [[Workout]] = [ [], [], [], [], [] ]
     
     var delegate: WorkoutDataDelegate?
     
@@ -35,25 +35,11 @@ class WorkoutDataSource {
                     let decoder = JSONDecoder()
                     print(data)
                     let workoutArray: [Workout] = try! decoder.decode([Workout].self, from: data)
-                    //self.singleMuscleWorkoutArray = try! decoder.decode([Workout].self, from: data)
-                    //self.allMusclesWorkoutArray.append(self.singleMuscleWorkoutArray)
-                    //print(self.singleMuscleWorkoutArray)
-                    //self.allMusclesWorkoutArray.append(workoutArray)
-                    print(workoutArray)
-                    print("BB")
                     completion(workoutArray)
-                    /*
-                    self.mutex = self.mutex + 1
-                    if self.mutex == 3 {
-                        print("DD")
-                        self.delegate?.workoutListLoaded()
-                    }
-                    */
                 }
             }
             dataTask.resume()
         }
-        
     }
     
     func getWorkoutDetail(with name: String) {
@@ -70,22 +56,9 @@ class WorkoutDataSource {
                     print("buraya bak")
                     print(data)
                     let workout: Workout = try! decoder.decode(Workout.self, from: data)
-                    //self.singleMuscleWorkoutArray = try! decoder.decode([Workout].self, from: data)
-                    //self.allMusclesWorkoutArray.append(self.singleMuscleWorkoutArray)
-                    //print(self.singleMuscleWorkoutArray)
-                    //self.allMusclesWorkoutArray.append(workoutArray)
                     DispatchQueue.main.async {
                         self.delegate?.workoutDetailsLoaded(workout: workout)
                     }
-                    //print("BB")
-                    
-                    /*
-                    self.mutex = self.mutex + 1
-                    if self.mutex == 3 {
-                        print("DD")
-                        self.delegate?.workoutListLoaded()
-                    }
-                    */
                 }
             }
             dataTask.resume()
@@ -96,31 +69,42 @@ class WorkoutDataSource {
         let dispatchGroup = DispatchGroup()
   
         for muscle in self.muscleNamesForAPI {
-            print("AA \(muscle)")
+            
             dispatchGroup.enter()
             self.getListOfWorkouts(for: muscle) { workoutArray in
                 if let muscleIndex = self.muscleNamesForAPI.firstIndex(of: muscle){
                     self.allMusclesWorkoutArray[muscleIndex] = workoutArray
-                    print("LEAVE")
+                    self.filteredAllMusclesWorkoutArray[muscleIndex] = workoutArray
+                    
                     dispatchGroup.leave()
                 }
-                //self.allMusclesWorkoutArray.append(workoutArray)
-                
             }
-            print("CC \(muscle)")
-            
         }
         
-        print("EE")
-        print(allMusclesWorkoutArray)
-        
         dispatchGroup.notify(queue: .main) {
-            print("NOTIFY'DAYIZ")
-            print(self.allMusclesWorkoutArray)
             DispatchQueue.main.async {
                 self.delegate?.workoutListLoaded()
             }
             completion("completed")
+        }
+    }
+    
+    func filterDataWithSearchBar(searchText: String) {
+        filteredAllMusclesWorkoutArray = [ [], [], [], [], [] ]
+        if searchText == "" {
+            filteredAllMusclesWorkoutArray = allMusclesWorkoutArray
+        } else {
+            for index in 0...(allMusclesWorkoutArray.count-1){
+                
+                for workout in allMusclesWorkoutArray[index]{
+                    if workout.name.lowercased().contains(searchText.lowercased()){
+                        filteredAllMusclesWorkoutArray[index].append(workout)
+                    }
+                }
+            }
+        }
+        DispatchQueue.main.async {
+            self.delegate?.workoutListLoaded()
         }
     }
     
@@ -129,18 +113,15 @@ class WorkoutDataSource {
     }
     
     func getWorkout(section: Int, row: Int) -> Workout? {
-        print(allMusclesWorkoutArray)
-        guard section < allMusclesWorkoutArray.count else {
+        guard section < filteredAllMusclesWorkoutArray.count else {
             return nil
         }
-        guard row < allMusclesWorkoutArray[section].count else {
+        guard row < filteredAllMusclesWorkoutArray[section].count else {
             return nil
         }
-        return allMusclesWorkoutArray[section][row]
+        return filteredAllMusclesWorkoutArray[section][row]
     }
-    
-    
-    
+ 
     func getSectionTitles() -> [String] {
         return self.sectionTitles
     }
@@ -151,6 +132,10 @@ class WorkoutDataSource {
     
     func getAllMusclesWorkoutArray() -> [[Workout]] {
         return self.allMusclesWorkoutArray
+    }
+    
+    func getFilteredAllMusclesWorkoutArray() -> [[Workout]] {
+        return self.filteredAllMusclesWorkoutArray
     }
     
     func getNumberOfMuscleSections() -> Int {
