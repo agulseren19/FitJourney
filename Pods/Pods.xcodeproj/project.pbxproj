@@ -1300,7 +1300,7 @@
 		9C78FE8380BC4291FCDDADBBADD2A8E9 /* FIRGoogleAuthCredential.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRGoogleAuthCredential.m; path = FirebaseAuth/Sources/AuthProvider/Google/FIRGoogleAuthCredential.m; sourceTree = "<group>"; };
 		9CF8F6CF3AA2406F05BEF0C9809D0143 /* CandleChartDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandleChartDataProvider.swift; path = Source/Charts/Interfaces/CandleChartDataProvider.swift; sourceTree = "<group>"; };
 		9D21AC89A8DD72D28AD4B2900BD3C2E2 /* Charts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Charts.debug.xcconfig; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DA36AA8FFBEBFD132A44809B7836F15 /* AxisRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AxisRenderer.swift; path = Source/Charts/Renderers/AxisRenderer.swift; sourceTree = "<group>"; };
 		9DBC813B75D616F865C81EECCB9C03AF /* GTMSessionFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcher.m; path = Sources/Core/GTMSessionFetcher.m; sourceTree = "<group>"; };
 		9DD0D61BF2186EA4890BDAAFC7F217E5 /* FIRAuthStoredUserManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAuthStoredUserManager.m; path = FirebaseAuth/Sources/SystemService/FIRAuthStoredUserManager.m; sourceTree = "<group>"; };
@@ -1563,7 +1563,7 @@
 		F32BCE5783352135148E0BAEFDBC432B /* FIRUserInfoImpl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRUserInfoImpl.h; path = FirebaseAuth/Sources/User/FIRUserInfoImpl.h; sourceTree = "<group>"; };
 		F3E7458F7D38C89A9DE4BBACD3450C88 /* SwiftAlgorithms */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftAlgorithms; path = Algorithms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3FF44CC999D0F9EBE03618272206B83 /* BarChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarChartData.swift; path = Source/Charts/Data/Implementations/Standard/BarChartData.swift; sourceTree = "<group>"; };
-		F4043967E03CDDFFD5353A6A4C2137AA /* Pods-FitJourney */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-FitJourney"; path = Pods_FitJourney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4043967E03CDDFFD5353A6A4C2137AA /* Pods_FitJourney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitJourney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44032CDE63479ADF120730D07AC0EDA /* Chain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Chain.swift; path = Sources/Algorithms/Chain.swift; sourceTree = "<group>"; };
 		F44731CDC9C0F54E66333AB2F18D88BD /* FIRMultiFactorResolver+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FIRMultiFactorResolver+Internal.h"; path = "FirebaseAuth/Sources/MultiFactor/FIRMultiFactorResolver+Internal.h"; sourceTree = "<group>"; };
 		F462327AF1545A26BB77B0A0F6AE4949 /* FIRAuthAppCredential.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAuthAppCredential.m; path = FirebaseAuth/Sources/SystemService/FIRAuthAppCredential.m; sourceTree = "<group>"; };
@@ -1718,7 +1718,6 @@
 				C84D76DFA321BFDAF6E95262322AAD33 /* Core */,
 				7BD0365AE51F5C63F5D7081D463916C6 /* Support Files */,
 			);
-			name = Charts;
 			path = Charts;
 			sourceTree = "<group>";
 		};
@@ -1765,7 +1764,6 @@
 				0990F4C460AB7B870E3598127120E213 /* Windows.swift */,
 				3E1A85AD776C60C6579927C40617D814 /* Support Files */,
 			);
-			name = SwiftAlgorithms;
 			path = SwiftAlgorithms;
 			sourceTree = "<group>";
 		};
@@ -1899,7 +1897,7 @@
 				B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities */,
 				C1998E0D8085221AD87F89B614C10E52 /* GTMSessionFetcher */,
 				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher */,
-				F4043967E03CDDFFD5353A6A4C2137AA /* Pods-FitJourney */,
+				F4043967E03CDDFFD5353A6A4C2137AA /* Pods_FitJourney.framework */,
 				1B916EC69C18AFF5B7D677082151799B /* Pods-FitJourney-FitJourneyUITests */,
 				785B2A8757898B840DC7BB193EB6EF09 /* Pods-FitJourneyTests */,
 				3347A1AB6546F0A3977529B8F199DC41 /* PromisesObjC */,
@@ -2019,7 +2017,6 @@
 				BA1896701A8BB0D5ABA413DC326A7585 /* WKInterfaceImage+Kingfisher.swift */,
 				6B2569CF237095DCE9DD7E0413DB8AEF /* Support Files */,
 			);
-			name = Kingfisher;
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
@@ -2094,7 +2091,6 @@
 				FF9A5015DACA593996879768C3986466 /* FBLPromises.h */,
 				8331361A2115E62B1AB18EFC52FC82AE /* Support Files */,
 			);
-			name = PromisesObjC;
 			path = PromisesObjC;
 			sourceTree = "<group>";
 		};
@@ -2159,7 +2155,6 @@
 				8AEF658B0E3EE45F1E7C799CE21A70B1 /* FIRVersion.m */,
 				F20EF1BF72A882CEF62111D476990953 /* Support Files */,
 			);
-			name = FirebaseCore;
 			path = FirebaseCore;
 			sourceTree = "<group>";
 		};
@@ -2179,7 +2174,6 @@
 				764AFB0E8697D6E8E4344EED83AE105F /* WeakContainer.swift */,
 				3EE9E53B46935E8B598E05CD177A1400 /* Support Files */,
 			);
-			name = FirebaseCoreInternal;
 			path = FirebaseCoreInternal;
 			sourceTree = "<group>";
 		};
@@ -2215,7 +2209,6 @@
 				75033B5EB08149AABEA5A8CA80D1BAA3 /* Core */,
 				B982E82DABAA70CE73140C583A879916 /* Support Files */,
 			);
-			name = GTMSessionFetcher;
 			path = GTMSessionFetcher;
 			sourceTree = "<group>";
 		};
@@ -2657,7 +2650,6 @@
 				44A2220B4D4EA6B32E0E40DEEE3D0C64 /* NSData+FIRBase64.m */,
 				210E84689D16175CBF418282B42C1A52 /* Support Files */,
 			);
-			name = FirebaseAuth;
 			path = FirebaseAuth;
 			sourceTree = "<group>";
 		};
@@ -2693,7 +2685,6 @@
 				81959E3423F3351E9303CF97599ECE59 /* Reachability */,
 				5F332AED72CDF170E30130BBB2458CA1 /* Support Files */,
 			);
-			name = GoogleUtilities;
 			path = GoogleUtilities;
 			sourceTree = "<group>";
 		};
@@ -3188,7 +3179,7 @@
 			);
 			name = "Pods-FitJourney";
 			productName = Pods_FitJourney;
-			productReference = F4043967E03CDDFFD5353A6A4C2137AA /* Pods-FitJourney */;
+			productReference = F4043967E03CDDFFD5353A6A4C2137AA /* Pods_FitJourney.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A1BBBB5D8644FA32E56173CAE7575104 /* Pods-FitJourney-FitJourneyUITests */ = {
