@@ -30,12 +30,14 @@ PODS:
   - GoogleUtilities/Reachability (7.10.0):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (3.1.0)
+  - Kingfisher (7.5.0)
   - PromisesObjC (2.1.1)
   - SwiftAlgorithms (1.0.0)
 
 DEPENDENCIES:
   - Charts
   - FirebaseAuth
+  - Kingfisher (~> 7.0)
 
 SPEC REPOS:
   trunk:
@@ -45,6 +47,7 @@ SPEC REPOS:
     - FirebaseCoreInternal
     - GoogleUtilities
     - GTMSessionFetcher
+    - Kingfisher
     - PromisesObjC
     - SwiftAlgorithms
 
@@ -55,9 +58,10 @@ SPEC CHECKSUMS:
   FirebaseCoreInternal: 29b76f784d607df8b2a1259d73c3f04f1210137b
   GoogleUtilities: bad72cb363809015b1f7f19beb1f1cd23c589f95
   GTMSessionFetcher: c9e714f7eec91a55641e2bab9f45fd83a219b882
+  Kingfisher: b9c2a4a4af2990a768445c277359b27bde287d71
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
   SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
 
-PODFILE CHECKSUM: ff9d3a329b2e2b2f4b7f1cd69931e4c94b898d19
+PODFILE CHECKSUM: 19db1fdad15ec60b059b5d5caf8e62e4d308e5dd
 
 COCOAPODS: 1.11.3

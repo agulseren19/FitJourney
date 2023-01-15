@@ -9,4 +9,5 @@ import Foundation
 
 protocol ProfileDelegate {
     func signOut()
+    func weightRangeIsUpdated()
 }

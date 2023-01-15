@@ -49,6 +49,9 @@ class SignInHelper {
                 if let weightsUnwrapped = document.data()?["weights"] as? [String]{
                     user.setWeightsArray(weights: weightsUnwrapped)
                 }
+                if let profilePictureUrl = document.get("profileImageUrl") as? String{
+                    user.setProfilePictureUrl(profilePictureUrl: profilePictureUrl)
+                }
                 let userDefault = UserDefaults.standard
                 userDefault.setValue(userEmail, forKey: "userEmail")
                 userDefault.setValue(userPassword, forKey: "userPassword")

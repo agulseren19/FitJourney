@@ -33,6 +33,7 @@ class SignUpHelper{
                     let db = Firestore.firestore()
                     db.collection("users").document(email).setData([
                         "email": email,
+                        "profileImageUrl" : "https://firebasestorage.googleapis.com/v0/b/fitjourney-a2097.appspot.com/o/images%2FdefaultImage.png?alt=media&token=56a7c171-af6b-4057-b348-b0428557058c",
                         //    "password": password,
                         "weights": []
                     ]) { err in

@@ -12,6 +12,7 @@ final class User: NSObject {
     
     var email : String = ""
     var weights = [String]()
+    var profilePictureUrl : String = ""
     
     private override init() { }
     
@@ -19,6 +20,9 @@ final class User: NSObject {
         self.email = email
     }
     
+    func setProfilePictureUrl(profilePictureUrl : String) {
+        self.profilePictureUrl = profilePictureUrl
+    }
     
     func getEmail() -> String {
         return self.email
