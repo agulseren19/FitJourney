@@ -24,11 +24,12 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         profileHelper.delegate = self
         profilePictureHelper.delegate = self
-        profileHelper.getUserInfo()
+        
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        profileHelper.getUserInfo()
         self.profileImageView.kf.indicatorType = .activity
                 self.profileImageView.kf.setImage(with: URL(string: User.sharedInstance.profilePictureUrl), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
                 self.profileImageView.layer.borderWidth = 1.0
@@ -66,7 +67,7 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController: ProfileDelegate {
     func weightRangeIsUpdated() {
         emailLabel.text = profileHelper.userEmail
-        weightRangeLabel.text = "Current Weight: \(profileHelper.userLastEnteredWeight ?? 0.0) kg"
+        weightRangeLabel.text = "Last Entered Weight: \(profileHelper.userLastEnteredWeight ?? 0.0) kg"
     }
     
     func signOut() {

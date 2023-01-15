@@ -11,6 +11,7 @@ class WorkoutsViewController: UIViewController, UISearchResultsUpdating {
 
     @IBOutlet weak var workoutsTableView: UITableView!
     
+    @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView!
     let searchController = UISearchController()
     
     private var workoutDataSource = WorkoutDataSource()
@@ -19,6 +20,8 @@ class WorkoutsViewController: UIViewController, UISearchResultsUpdating {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        loadingActivityIndicator.isHidden = false
+        workoutsTableView.isHidden = true
         searchController.searchResultsUpdater = self
         navigationItem.searchController = searchController
         workoutDataSource.delegate = self
@@ -91,6 +94,8 @@ extension WorkoutsViewController: UITableViewDataSource {
 
 extension WorkoutsViewController: WorkoutDataDelegate {
     func workoutListLoaded() {
+        loadingActivityIndicator.isHidden = true
+        workoutsTableView.isHidden = false
         self.workoutsTableView.reloadData()
     }
     

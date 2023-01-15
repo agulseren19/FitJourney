@@ -33,7 +33,7 @@ class WorkoutDataSource {
             let dataTask = session.dataTask(with: request) { data, response, error in
                 if let data = data {
                     let decoder = JSONDecoder()
-                    print(data)
+                    //print(data)
                     let workoutArray: [Workout] = try! decoder.decode([Workout].self, from: data)
                     completion(workoutArray)
                 }
@@ -53,8 +53,7 @@ class WorkoutDataSource {
             let dataTask = session.dataTask(with: request) { data, response, error in
                 if let data = data {
                     let decoder = JSONDecoder()
-                    print("buraya bak")
-                    print(data)
+                    //print(data)
                     let workout: Workout = try! decoder.decode(Workout.self, from: data)
                     DispatchQueue.main.async {
                         self.delegate?.workoutDetailsLoaded(workout: workout)
