@@ -17,6 +17,7 @@ target 'FitJourney' do
   pod 'FirebaseAuth'
   pod 'Charts'
   pod 'GoogleSignIn'
+  pod 'Kingfisher', '~> 7.0'
   
   target 'FitJourneyTests' do
     inherit! :search_paths
